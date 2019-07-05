@@ -9,3 +9,10 @@ a:hover {
   color: inherit;
 }
 
+.border-top-red {
+  position: absolute;
+  width: 10%;
+  border-top: 2px solid $crimson;
+  top: 0;
+  left: 0;
+}
