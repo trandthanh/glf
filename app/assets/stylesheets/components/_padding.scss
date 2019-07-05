@@ -1,0 +1,35 @@
+@include media-breakpoint-only(xs) {
+  .padding-5-l-r {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+}
+@include media-breakpoint-only(sm) {
+  .padding-5-l-r {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+}
+@include media-breakpoint-only(md) {
+  .padding-5-l-r {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+}
+@include media-breakpoint-only(lg) {
+  .padding-5-l-r {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+}
+@include media-breakpoint-only(xl) {
+  .padding-5-l-r {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+}
