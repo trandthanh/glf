@@ -1,0 +1,43 @@
+@include media-breakpoint-only(xs) {
+  .tagline-top {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+  }
+}
+@include media-breakpoint-only(sm) {
+  .tagline-top {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+  }
+}
+@include media-breakpoint-only(md) {
+  .tagline-top {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .tagline-top {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .tagline-top {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
