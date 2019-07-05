@@ -1,12 +1,37 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+@include media-breakpoint-only(xs) {
+  .navbar {
+    display: none;
+  }
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+@include media-breakpoint-only(sm) {
+  .navbar {
+    display: none;
+  }
 }
+@include media-breakpoint-only(md) {
+  .navbar-mobile {
+    display: none !important;
+  }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  .overlay {
+    display: none !important;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .navbar-mobile {
+    display: none !important;
+  }
+
+  .overlay {
+    display: none !important;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .navbar-mobile {
+    display: none !important;
+  }
+
+  .overlay {
+    display: none !important;
+  }
 }
