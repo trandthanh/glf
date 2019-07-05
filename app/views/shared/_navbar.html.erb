@@ -1,35 +1,67 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "logoglf.png" %>
-    <% end %>
+<div class="navbar background-color-white px-5 width-100pc">
+  <%= link_to root_path do %>
+    <div class="d-flex mt-3">
+        <%= image_tag "logoglf.png", class: "logo-50px" %>
+        <h1 class="font-family-applemyungjo pl-2">glf</h1>
+    </div>
+  <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <div class="d-flex justify-content-between align-items-center width-30pc">
 
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+    <div class="dropdown">
+      <p class="m-0 font-weight-100">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <p class="m-0 font-weight-100">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+
+    <div class="button-crimson">
+      <p class="text-color-white m-0">Nous contacter</p>
+    </div>
   </div>
 </div>
+
+<!-- MOBILE NAVBAR -->
+
+<div class="navbar-mobile d-flex align-items-center justify-content-between px-4 background-color-transparent">
+  <%= link_to root_path do %>
+    <div class="d-flex mt-3">
+        <%= image_tag "logoglf.png", class: "logo-50px" %>
+        <h1 class="font-family-applemyungjo pl-2">glf</h1>
+    </div>
+  <% end %>
+
+  <div id="myNav" class="text-color-crimson font-size-24px"><i class="fas fa-bars"></i></div>
+</div>
+
+<!-- SIDENAV -->
+
+<div class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <div class="close text-color-white pr-3 pt-3"><i class="fas fa-times"></i></div>
+
+  <!-- Overlay content -->
+  <div class="overlay-content d-flex flex-column align-items-center">
+    <%= link_to root_path do %>
+      <h1 class="text-color-white ">Les services</h1>
+    <% end %>
+    <%= link_to root_path do %>
+      <h1 class="text-color-white ">L'entreprise</h1>
+    <% end %>
+  </div>
+
+</div>
+
