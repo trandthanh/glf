@@ -1,2 +1,11 @@
 // Specific CSS for your home-page
 
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
