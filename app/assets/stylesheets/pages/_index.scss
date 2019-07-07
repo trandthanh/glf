@@ -1,2 +1,26 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+// Voir avec Diane
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.border-top-red {
+  position: absolute;
+  width: 10%;
+  border-top: 2px solid $crimson;
+  top: 0;
+  left: 0;
+}

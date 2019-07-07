@@ -1,4 +1,7 @@
-<h1 class="text-color-crimson">Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-desktop">
+  <%= render 'pages/home/banner_desktop' %>
+</div>
 
-<%= link_to "test", services_gestion_locative_path  %>
+<div class="banner-mobile">
+  <%= render 'pages/home/banner_mobile' %>
+</div>
