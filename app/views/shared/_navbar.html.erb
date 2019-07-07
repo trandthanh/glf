@@ -20,8 +20,9 @@
     <div class="dropdown pb-2">
       <p class="m-0 font-weight-100">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
       <div class="dropdown-content box-shadow-two-black mt-2">
-        <%= link_to "Qui sommes-nous", about_path %>
-        <%= link_to "Recrutement", jobs_path %>
+        <%= link_to "Qui sommes-nous ?", a_propos_path %>
+        <%= link_to "Contact", contact_path %>
+        <%= link_to "Recrutement", recrutement_path %>
       </div>
     </div>
 
@@ -74,10 +75,13 @@
 
     <div>
       <h1 class="text-color-white ">L'entreprise</h1>
-      <%= link_to about_path do %>
+      <%= link_to a_propos_path do %>
         <h2 class="text-color-white m-0">Qui sommes-nous?</h2>
       <% end %>
-      <%= link_to jobs_path do %>
+      <%= link_to contact_path do %>
+        <h2 class="text-color-white m-0">Contact</h2>
+      <% end %>
+      <%= link_to recrutement_path do %>
         <h2 class="text-color-white m-0">Recrutement</h2>
       <% end %>
     </div>

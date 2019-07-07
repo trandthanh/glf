@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   # Static pages routes
-  get '/about', to: 'pages#about'
+  get '/a-propos', to: 'pages#apropos'
   get '/contact', to: 'pages#contact'
-  get '/jobs', to: 'pages#jobs'
+  get '/recrutement', to: 'pages#recrutement'
   get '/syndic', to: 'pages#syndic'
 
   # Static pages for services
