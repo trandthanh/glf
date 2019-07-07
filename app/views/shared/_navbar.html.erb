@@ -6,30 +6,30 @@
     </div>
   <% end %>
 
-  <div class="d-flex justify-content-between align-items-center width-30pc">
-
-
-    <div class="dropdown">
+  <div class="d-flex justify-content-between align-items-center width-35pc">
+    <div class="dropdown pb-2">
       <p class="m-0 font-weight-100">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+      <div class="dropdown-content box-shadow-two-black mt-2">
+        <%= link_to "Gestion locative", services_gestion_locative_path %>
+        <%= link_to "Devenir locataire", services_devenir_locataire_path %>
+        <%= link_to "Vendre", services_vendre_path %>
+        <%= link_to "Acheter", services_acheter_path  %>
       </div>
     </div>
 
-    <div class="dropdown">
+    <div class="dropdown pb-2">
       <p class="m-0 font-weight-100">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
-      <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+      <div class="dropdown-content box-shadow-two-black mt-2">
+        <%= link_to "Qui sommes-nous", about_path %>
+        <%= link_to "Recrutement", jobs_path %>
       </div>
     </div>
 
-    <div class="button-crimson">
-      <p class="text-color-white m-0">Nous contacter</p>
-    </div>
+    <%= link_to contact_path do %>
+      <div class="button-crimson">
+        <p class="text-color-white m-0">Nous contacter</p>
+      </div>
+    <% end %>
   </div>
 </div>
 
@@ -48,19 +48,39 @@
 
 <!-- SIDENAV -->
 
-<div class="overlay">
+<div class="overlay background-color-warm-black">
 
   <!-- Button to close the overlay navigation -->
   <div class="close text-color-white pr-3 pt-3"><i class="fas fa-times"></i></div>
 
   <!-- Overlay content -->
   <div class="overlay-content d-flex flex-column align-items-center">
-    <%= link_to root_path do %>
-      <h1 class="text-color-white ">Les services</h1>
-    <% end %>
-    <%= link_to root_path do %>
+
+    <div class="mb-2">
+      <h1 class="text-color-white">Les services</h1>
+      <%= link_to services_gestion_locative_path do %>
+        <h2 class="text-color-white m-0">Gestion locative</h2>
+      <% end %>
+      <%= link_to services_devenir_locataire_path do %>
+        <h2 class="text-color-white m-0">Devenir locataire</h2>
+      <% end %>
+      <%= link_to services_vendre_path do %>
+        <h2 class="text-color-white m-0">Vendre</h2>
+      <% end %>
+      <%= link_to services_acheter_path do %>
+        <h2 class="text-color-white m-0">Acheter</h2>
+      <% end %>
+    </div>
+
+    <div>
       <h1 class="text-color-white ">L'entreprise</h1>
-    <% end %>
+      <%= link_to about_path do %>
+        <h2 class="text-color-white m-0">Qui sommes-nous?</h2>
+      <% end %>
+      <%= link_to jobs_path do %>
+        <h2 class="text-color-white m-0">Recrutement</h2>
+      <% end %>
+    </div>
   </div>
 
 </div>
