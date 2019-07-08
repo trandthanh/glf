@@ -1,0 +1,46 @@
+@include media-breakpoint-only(xs) {
+  .flexteam {
+    display: block;
+    text-align: center;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .flexteam {
+    display: block;
+    text-align: center;
+  }
+}
+@include media-breakpoint-only(md) {
+  .flexteam {
+    display: block;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+  .flexteam {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .flexteam {
+    flex-wrap: wrap;
+    display: flex;
+  }
+}
+
+.basile ul {
+  list-style: none;
+  padding-inline-start: 20px;
+}
+
+#listbullet>li:before {
+  list-style: none;
+  content: "\2022";
+  color: $crimson;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 18px;
+}
