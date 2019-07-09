@@ -7,24 +7,32 @@
   <div class="cta-menu container my-5">
     <div class="row">
       <div class="col-6 p-0">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 mr-2 mb-2 d-flex justify-content-center border-top-5px-crimson">
-          <h2 class="font-size-16px">Gestion<br>locative</h3>
-        </div>
+        <%= link_to services_gestion_locative_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 mr-2 mb-2 d-flex justify-content-center border-top-5px-crimson">
+            <h2 class="font-size-16px">Gestion<br>locative</h3>
+          </div>
+        <% end %>
       </div>
       <div class="col-6 p-0">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 ml-2 mb-2 d-flex justify-content-center border-top-5px-amaranth">
-          <h2 class="font-size-16px">Devenir<br>locataire</h3>
-        </div>
+        <%= link_to services_devenir_locataire_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 ml-2 mb-2 d-flex justify-content-center border-top-5px-amaranth">
+            <h2 class="font-size-16px">Devenir<br>locataire</h3>
+          </div>
+        <% end %>
       </div>
       <div class="col-6 p-0">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 mr-2 mt-2 d-flex justify-content-center border-top-5px-light-carmine-pink">
-          <h2 class="font-size-16px">Vendre<br>un bien</h3>
-        </div>
+        <%= link_to services_vendre_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 mr-2 mt-2 d-flex justify-content-center border-top-5px-light-carmine-pink">
+            <h2 class="font-size-16px">Vendre<br>un bien</h3>
+          </div>
+        <% end %>
       </div>
       <div class="col-6 p-0">
+        <%= link_to services_acheter_path do %>
         <div class="background-color-white box-shadow-two-black px-5 py-4 ml-2 mt-2 d-flex justify-content-center border-top-5px-ruddy-pink">
           <h2 class="font-size-16px">Acheter<br>un bien</h3>
         </div>
+        <% end %>
       </div>
     </div>
   </div>

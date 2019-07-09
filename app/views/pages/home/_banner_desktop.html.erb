@@ -7,25 +7,33 @@
   </div>
   <div class="cta-menu height-9vh">
     <div class="row mx-5">
-      <div class="col-sm-6 col-md-3 px-4" style="margin-top: -60px;">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-crimson">
-          <h2 class="font-size-24px">Gestion<br>locative</h3>
-        </div>
+      <div class="col-sm-6 col-md-3 px-4 hover-cta">
+        <%= link_to services_gestion_locative_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-crimson">
+            <h3 class="font-size-24px">Gestion<br>locative</h3>
+          </div>
+        <% end %>
       </div>
-      <div class="col-sm-6 col-md-3 px-4" style="margin-top: -60px;">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-amaranth">
-          <h2 class="font-size-24px">Devenir<br>locataire</h3>
-        </div>
+      <div class="col-sm-6 col-md-3 px-4 hover-cta">
+        <%= link_to services_devenir_locataire_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-amaranth">
+            <h3 class="font-size-24px">Devenir<br>locataire</h3>
+          </div>
+        <% end %>
       </div>
-      <div class="col-sm-6 col-md-3 px-4" style="margin-top: -60px;">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-light-carmine-pink">
-          <h2 class="font-size-24px">Vendre<br>un bien</h3>
-        </div>
+      <div class="col-sm-6 col-md-3 px-4 hover-cta">
+        <%= link_to services_vendre_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-light-carmine-pink">
+            <h3 class="font-size-24px">Vendre<br>un bien</h3>
+          </div>
+        <% end %>
       </div>
-      <div class="col-sm-6 col-md-3 px-4" style="margin-top: -60px;">
-        <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-ruddy-pink">
-          <h2 class="font-size-24px">Acheter<br>un bien</h3>
-        </div>
+      <div class="col-sm-6 col-md-3 px-4 hover-cta">
+        <%= link_to services_acheter_path do %>
+          <div class="background-color-white box-shadow-two-black px-5 py-4 d-flex justify-content-center border-top-5px-ruddy-pink">
+            <h3 class="font-size-24px">Acheter<br>un bien</h3>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

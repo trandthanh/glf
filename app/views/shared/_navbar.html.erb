@@ -6,10 +6,10 @@
     </div>
   <% end %>
 
-  <div class="d-flex justify-content-between align-items-center width-35pc">
+  <div class="d-flex justify-content-between align-items-center width-45pc">
 
     <div class="dropdown pb-2 pt-3">
-      <p class="m-0 font-weight-100">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
+      <p class="m-0 font-weight-100 text-color-charleston-green">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
       <div class="dropdown-content box-shadow-two-black mt-2 ml-n5">
         <%= link_to "Gestion locative", services_gestion_locative_path, class: "text-color-warm-black" %>
         <%= link_to "Devenir locataire", services_devenir_locataire_path, class: "text-color-warm-black" %>
@@ -19,12 +19,16 @@
     </div>
 
     <div class="dropdown pb-2 pt-3">
-      <p class="m-0 font-weight-100">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
+      <p class="m-0 font-weight-100 text-color-charleston-green">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
       <div class="dropdown-content box-shadow-two-black mt-2 ml-n5">
         <%= link_to "Qui sommes-nous ?", a_propos_path, class: "text-color-warm-black" %>
         <%= link_to "Contact", contact_path, class: "text-color-warm-black" %>
         <%= link_to "Recrutement", recrutement_path, class: "text-color-warm-black" %>
       </div>
+    </div>
+
+    <div class="pb-2 pt-3">
+      <a href="https://www.orchestrav2.egiweb.net" target="blank"><p class="m-0 font-weight-100 text-color-charleston-green">Extranet</p></a>
     </div>
 
     <%= link_to contact_path do %>
@@ -85,6 +89,7 @@
       <%= link_to recrutement_path do %>
         <h4 class="text-color-white m-0">Recrutement</h4>
       <% end %>
+      <a href="https://www.orchestrav2.egiweb.net" target="blank"><h4 class="text-color-white m-0">Extranet</h4></a>
     </div>
   </div>
 
