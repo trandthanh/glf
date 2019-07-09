@@ -7,20 +7,17 @@
    -moz-transform: rotate(0deg);
    -o-transform: rotate(0deg);
     transform: rotate(0deg);
-   -webkit-transition-duration: 0.15s;
-   -moz-transition-duration: 0.15s;
-   -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
+   -webkit-transition-duration: 0.2s;
+   -moz-transition-duration: 0.2s;
+   -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
   }
 }
 
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
-  border-radius: 4px;
   display: none;
   position: absolute;
-  font-weight: 500;
-  background-color: $glf-white;
   min-width: 220px;
   // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -28,6 +25,12 @@
    -moz-transition-duration: 0.25s;
    -o-transition-duration: 0.25s;
     transition-duration: 0.25s;
+}
+
+.box-content {
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: $glf-white;
 }
 
 /* Links inside the dropdown */
@@ -39,8 +42,7 @@
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  font-weight: 600;
-  color: $warm-black;
+  color: $crimson;
    -webkit-transition-duration: 0.25s;
    -moz-transition-duration: 0.25s;
    -o-transition-duration: 0.25s;
@@ -53,10 +55,10 @@
    -moz-transform: rotate(180deg);
    -o-transform: rotate(180deg);
     transform: rotate(180deg);
-   -webkit-transition-duration: 0.15s;
-   -moz-transition-duration: 0.15s;
-   -o-transition-duration: 0.15s;
-    transition-duration: 0.15s;
+   -webkit-transition-duration: 0.2s;
+   -moz-transition-duration: 0.2s;
+   -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
   }
 }
 
@@ -64,8 +66,3 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-// .dropdown:hover .dropbtn {
-//   background-color: #3e8e41;
-// }
