@@ -1,5 +1,5 @@
 <footer class="page-footer px-5 pt-5 background-color-warm-black text-color-glf-white">
-  <div class="container-fluid text-center text-md-left">
+  <div class="container-fluid text-center text-md-left pt-5">
     <div class="row pb-4">
       <div class="col-md-2 mt-md-0 pl-0 pr-0">
         <div class="col-md-12 mt-md-0 mt-3 pl-0 pr-0">
@@ -21,7 +21,7 @@
                 <p class="mb-0">Tel : 01 44 18 18 18</p>
               </li>
               <li>
-                <p class="mb-0">contact@glf.com</p>
+                <%= link_to "contact@glf.com", "mailto:contact@glf.com", class: "mb-0 text-color-white" %>
               </li>
             </ul>
           </div>
@@ -29,16 +29,16 @@
             <h5 class="font-weight-500 mb-4">L'entreprise</h5>
             <ul class="list-unstyled">
               <li>
-                <%= link_to "Qui sommes nous ?", a_propos_path, class: "text-color-glf-white" %>
+                <%= link_to "Qui sommes nous ?", a_propos_path %>
               </li>
               <li>
-                <%= link_to "Contact", contact_path, class: "text-color-glf-white" %>
+                <%= link_to "Contact", contact_path %>
               </li>
               <li>
-                <%= link_to "Recrutement", recrutement_path, class: "text-color-glf-white" %>
+                <%= link_to "Recrutement", recrutement_path %>
               </li>
               <li>
-                <%= link_to "Copropriété", syndic_path, class: "text-color-glf-white" %>
+                <%= link_to "Copropriété", syndic_path %>
               </li>
             </ul>
           </div>
@@ -46,16 +46,16 @@
             <h5 class="font-weight-500 mb-4">Les services</h5>
             <ul class="list-unstyled">
               <li>
-                <%= link_to "Gestion locative", services_gestion_locative_path, class: "text-color-glf-white" %>
+                <%= link_to "Gestion locative", services_gestion_locative_path %>
               </li>
               <li>
-                <%= link_to "Devenir locataire", services_devenir_locataire_path, class: "text-color-glf-white" %>
+                <%= link_to "Devenir locataire", services_devenir_locataire_path %>
               </li>
               <li>
-                <%= link_to "Vendre son bien", services_vendre_path, class: "text-color-glf-white" %>
+                <%= link_to "Vendre son bien", services_vendre_path %>
               </li>
               <li>
-                <%= link_to "Acheter un bien", services_acheter_path, class: "text-color-glf-white" %>
+                <%= link_to "Acheter un bien", services_acheter_path %>
               </li>
             </ul>
           </div>
