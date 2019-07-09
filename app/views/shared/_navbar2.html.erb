@@ -10,20 +10,28 @@
 
     <div class="dropdown">
       <p class="m-0 font-weight-100 text-color-charleston-green">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
-      <div class="dropdown-content box-shadow-two-black mt-2 ml-n5">
-        <%= link_to "Gestion locative", services_gestion_locative_path, class: "text-color-warm-black" %>
-        <%= link_to "Devenir locataire", services_devenir_locataire_path, class: "text-color-warm-black" %>
-        <%= link_to "Vendre", services_vendre_path, class: "text-color-warm-black" %>
-        <%= link_to "Acheter", services_acheter_path, class: "text-color-warm-black"  %>
+      <div class="dropdown-content ml-n5">
+        <div class="mt-3">
+          <div class="box-content box-shadow-two-black">
+            <%= link_to "Gestion locative", services_gestion_locative_path, class: "text-color-charleston-green" %>
+            <%= link_to "Devenir locataire", services_devenir_locataire_path, class: "text-color-charleston-green" %>
+            <%= link_to "Vendre", services_vendre_path, class: "text-color-charleston-green" %>
+            <%= link_to "Acheter", services_acheter_path, class: "text-color-charleston-green"  %>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="dropdown">
       <p class="m-0 font-weight-100 text-color-charleston-green">L'entreprise <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
-      <div class="dropdown-content box-shadow-two-black mt-2 ml-n5">
-        <%= link_to "Qui sommes-nous ?", a_propos_path, class: "text-color-warm-black" %>
-        <%= link_to "Contact", contact_path, class: "text-color-warm-black" %>
-        <%= link_to "Recrutement", recrutement_path, class: "text-color-warm-black" %>
+      <div class="dropdown-content ml-n5">
+        <div class="mt-3">
+          <div class="box-content box-shadow-two-black">
+            <%= link_to "Qui sommes-nous ?", a_propos_path, class: "text-color-charleston-green" %>
+            <%= link_to "Contact", contact_path, class: "text-color-charleston-green" %>
+            <%= link_to "Recrutement", recrutement_path, class: "text-color-charleston-green" %>
+          </div>
+        </div>
       </div>
     </div>
 
