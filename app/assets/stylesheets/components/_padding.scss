@@ -12,8 +12,8 @@
 }
 @include media-breakpoint-only(md) {
   .padding-5-l-r {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 @include media-breakpoint-only(lg) {

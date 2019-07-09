@@ -3,32 +3,63 @@
   .banner-desktop {
     display: none;
   }
-
 }
+
 @include media-breakpoint-only(sm) {
   .banner-desktop {
     display: none;
   }
-
 }
+
 @include media-breakpoint-only(md) {
   .banner-mobile {
     display: none;
   }
-
-
 }
+
 @include media-breakpoint-only(lg) {
   .banner-mobile {
     display: none;
   }
-
-
 }
+
 @include media-breakpoint-only(xl) {
   .banner-mobile {
     display: none;
   }
+}
 
+.page-footer {
+  a {
+    color: $glf-white;
+    opacity: 1;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  a:hover {
+    // color: $crimson;
+    opacity: 0.4;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+}
 
+.extranethover {
+  color: $charleston-green;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.extranethover:hover {
+  color: $crimson;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
