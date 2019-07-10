@@ -29,14 +29,14 @@
 /* Position the content inside the overlay */
 .overlay-content {
   position: relative;
-  top: 10%; /* 25% from the top */
+  top: 5%; /* 25% from the top */
   width: 100%; /* 100% width */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  // margin-top: -10px; /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
-  padding: 10px 10px 10px 20px;
+  padding: 8px 10px 8px 30px;
   text-decoration: none;
   font-size: 36px;
   display: block; /* Display block instead of inline */
@@ -44,8 +44,16 @@
 }
 
 /* When you mouse over the navigation links, change their color */
+// .overlay a:hover, .overlay a:focus {
+//   color: #f1f1f1;
+// }
+
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  opacity: 0.4;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 /* Position the close button (top right corner) */

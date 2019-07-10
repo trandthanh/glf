@@ -2,6 +2,10 @@
   height: 20vh;
 }
 
+.height-13vh {
+  height: 13vh;
+}
+
 .height-80vh {
   height: 80vh;
 }
@@ -19,14 +23,45 @@
   height: 75vh;
 }
 
+.height-78vh {
+  height: 78vh;
+}
+
 .height-90vh {
   height: 90vh;
 }
 
-.height-9vh {
-  height: 9vh;
+.height-12vh {
+  height: 12vh;
 }
 
 .height-100vh {
   height: 100vh;
+}
+
+
+@include media-breakpoint-only(xs) {
+  .height-13vh {
+    height: 0vh;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .height-13vh {
+    height: 0vh;
+  }
+}
+@include media-breakpoint-only(md) {
+  .height-13vh {
+    height: 13vh;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .height-13vh {
+    height: 13vh;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .height-13vh {
+    height: 13vh;
+  }
 }
