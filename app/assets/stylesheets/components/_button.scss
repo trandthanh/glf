@@ -79,6 +79,9 @@
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  a {
+    color: $glf-white;
+  }
 }
 
 .button-crimson2:hover {
@@ -88,6 +91,9 @@
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  a {
+    color: $glf-white;
+  }
 }
 
 .button-crimson2:active {
@@ -96,4 +102,7 @@
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  a {
+    color: #f78f9f;
+  }
 }
