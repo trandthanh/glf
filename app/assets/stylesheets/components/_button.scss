@@ -1,25 +1,36 @@
-.button-crimson {
-  padding: 10px;
-  background-color: $crimson;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  opacity: 0.75;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  cursor: pointer;
-}
+// .button-crimson {
+//   padding: 10px;
+//   background-color: $crimson;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border-radius: 4px;
+//   opacity: 0.75;
+//   -webkit-transition-duration: 0.3s;
+//   -moz-transition-duration: 0.3s;
+//   -o-transition-duration: 0.3s;
+//   transition-duration: 0.3s;
+//   cursor: pointer;
+//   color: $glf-white;
+// }
 
-.button-crimson:hover {
-  opacity: 1;
-  -webkit-transition-duration: 0.3s;
-  -moz-transition-duration: 0.3s;
-  -o-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
+// .button-crimson:hover {
+//   opacity: 1;
+//   color: $glf-white;
+//   -webkit-transition-duration: 0.3s;
+//   -moz-transition-duration: 0.3s;
+//   -o-transition-duration: 0.3s;
+//   transition-duration: 0.3s;
+// }
+
+// .button-crimson:active {
+//   opacity: 1;
+//   color: #f78f9f;
+//   -webkit-transition-duration: 0.3s;
+//   -moz-transition-duration: 0.3s;
+//   -o-transition-duration: 0.3s;
+//   transition-duration: 0.3s;
+// }
 
 .button-crimson-nav2 {
   padding: 10px;
@@ -47,9 +58,18 @@
   transition-duration: 0.3s;
 }
 
+.button-crimson-nav2:active {
+  color: #f78f9f;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
 .button-crimson2 {
   padding: 15px;
   background-color: #E85269;
+  color: $glf-white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,6 +83,15 @@
 
 .button-crimson2:hover {
   background-color: $crimson;
+  color: $glf-white;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.button-crimson2:active {
+  color: #f78f9f;
   -webkit-transition-duration: 0.3s;
   -moz-transition-duration: 0.3s;
   -o-transition-duration: 0.3s;
