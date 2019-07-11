@@ -7,12 +7,21 @@ class Message < MailForm::Base
   attribute :cv
   attribute :cl
   attribute :role
+  attribute :recipient_email
 
   def headers
-    {
-      subject: "Formulaire de contact",
-      to: "diane.jroussillon@gmail.com",
-      from: "#{first_name}"
-    }
+    if recipient_email == 'gl'
+      {
+        subject: "Formulaire de contact",
+        to: "trandgthanh@gmail.com",
+        from: %("#{first_name}" <#{email}>)
+      }
+    else
+      {
+        subject: "Formulaire de contact",
+        to: "diane.jroussillon@gmail.com",
+        from: %("#{first_name}" <#{email}>)
+      }
+    end
   end
 end
