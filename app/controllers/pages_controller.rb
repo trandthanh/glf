@@ -9,9 +9,11 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @message = Message.new(params[:message])
   end
 
   def recrutement
+    @message = Message.new(params[:message])
   end
 
   def syndic

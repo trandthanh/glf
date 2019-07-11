@@ -103,6 +103,8 @@
 <%= render 'shared/backgroundform' %>
 
 
+<%#= render 'messages/contact_form', :locals => { :recipient_email => "diane.jroussillon@gmail.com" } %>
 
+<%= render 'messages/contact_form', recipient_email: "diane.jroussillon@gmail.com" %>
 
-<%= render 'messages/contact_form' %>
+<%#= render 'messages/contact_form', locals: { recipient_email: "diane.jroussillon@gmail.com"} %>
