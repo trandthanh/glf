@@ -90,3 +90,34 @@
     padding-right: 3rem;
   }
 }
+
+@include media-breakpoint-only(xs) {
+  .padding-5-t-b {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .padding-5-t-b {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+}
+@include media-breakpoint-only(md) {
+  .padding-5-t-b {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .padding-5-t-b {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .padding-5-t-b {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
