@@ -3,12 +3,10 @@ class ServicesController < ApplicationController
 
   def gestionlocative
     @message = Message.new(params[:message])
-    @mail = "diane.jroussillon@gmail.com"
   end
 
   def devenirlocataire
     @message = Message.new(params[:message])
-    @mail = "trandgthanh@gmail.com"
   end
 
   def vendre
