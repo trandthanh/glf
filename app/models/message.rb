@@ -10,18 +10,10 @@ class Message < MailForm::Base
   attribute :recipient_email
 
   def headers
-    if recipient_email == 'gl'
       {
         subject: "Formulaire de contact",
-        to: "trandgthanh@gmail.com",
+        to: "#{recipient_email}",
         from: %("#{first_name}" <#{email}>)
       }
-    else
-      {
-        subject: "Formulaire de contact",
-        to: "diane.jroussillon@gmail.com",
-        from: %("#{first_name}" <#{email}>)
-      }
-    end
   end
 end

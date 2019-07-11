@@ -8,7 +8,7 @@ class ServicesController < ApplicationController
 
   def devenirlocataire
     @message = Message.new(params[:message])
-    @mail = "gl"
+    @mail = "trandgthanh@gmail.com"
   end
 
   def vendre
