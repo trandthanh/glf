@@ -16,6 +16,10 @@
   .overlay {
     display: none !important;
   }
+
+  .width-navbar {
+    width: 70%;
+  }
 }
 @include media-breakpoint-only(lg) {
   .navbar-mobile {
@@ -25,6 +29,10 @@
   .overlay {
     display: none !important;
   }
+
+  .width-navbar {
+    width: 45%;
+  }
 }
 @include media-breakpoint-only(xl) {
   .navbar-mobile {
@@ -33,6 +41,10 @@
 
   .overlay {
     display: none !important;
+  }
+
+  .width-navbar {
+    width: 45%;
   }
 }
 
