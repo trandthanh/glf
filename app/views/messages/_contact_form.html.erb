@@ -1,0 +1,17 @@
+<div id="contact">
+  <%= form_for @message, url: messages_path, remote: true do |f| %>
+    <div class="col-md-6">
+      <%= f.text_field :first_name, required: true, placeholder: 'prénom' %>
+      <%= f.text_field :last_name, required: true, placeholder: 'nom' %>
+      <%= f.text_field :email, required: true, placeholder: 'email' %>
+      <%= f.text_field :phone, required: true, placeholder: 'phone' %>
+
+      <%= f.text_area :body, rows: 8, cols: 40, required: true, placeholder: 'body' %>
+
+      <%= f.submit 'Envoyer', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+  <div class="col-md-6" id="flash-message">
+    <%= render 'messages/flash' %>
+  </div>
+</div>
