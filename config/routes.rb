@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get 'services/devenir-locataire', to: 'services#devenirlocataire'
   get 'services/vendre', to: 'services#vendre'
   get 'services/acheter', to: 'services#acheter'
+
+  # contact form
+  resources :messages, only: [:create]
 end
 
 
