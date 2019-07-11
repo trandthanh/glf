@@ -9,10 +9,18 @@ class Message < MailForm::Base
   attribute :role
 
   def headers
+    if @gesloc
+      {
+        subject: "Formulaire de contact",
+        to: "diane.jroussillon@gmail.com",
+        from: "#{first_name}"
+      }
+    else
     {
-      subject: "Formulaire de contact",
-      to: "diane.jroussillon@gmail.com",
-      from: "#{first_name}"
-    }
+        subject: "Formulaire de contact",
+        to: "trandgthanh@gmail.com",
+        from: "#{first_name}"
+      }
+    end
   end
 end

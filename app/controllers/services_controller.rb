@@ -3,6 +3,7 @@ class ServicesController < ApplicationController
 
   def gestionlocative
     @message = Message.new(params[:message])
+    @gesloc = true
   end
 
   def devenirlocataire
