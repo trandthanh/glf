@@ -29,6 +29,32 @@
   }
 }
 
+@include media-breakpoint-only(xs) {
+  .margin-l-60 {
+    margin-left: 0%;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .margin-l-60 {
+    margin-left: 0%;
+  }
+}
+@include media-breakpoint-only(md) {
+  .margin-l-60 {
+    margin-left: 60%;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .margin-l-60 {
+    margin-left: 60%;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .margin-l-60 {
+    margin-left: 60%;
+  }
+}
+
 
 .margin-top-1-6 {
   margin-top: -1.6rem;
