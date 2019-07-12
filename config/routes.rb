@@ -16,6 +16,15 @@ Rails.application.routes.draw do
 
   # contact form
   resources :messages, only: [:create]
+
+  # formulaire correct emails
+  # get '/contact', to: 'pages#contact', mail: 'courriers@glf.eu'
+  # get '/recrutement', to: 'pages#recrutement', mail: 'candidature@glf.eu'
+  # get 'services/gestion-locative', to: 'services#gestionlocative', mail: 'gestion@glf.eu'
+  # get 'services/devenir-locataire', to: 'services#devenirlocataire', mail: 'locations@glf.eu'
+  # get 'services/vendre', to: 'services#vendre', mail: 'transactions@glf.eu'
+  # get 'services/acheter', to: 'services#acheter', mail: 'transactions@glf.eu'
+
 end
 
 
