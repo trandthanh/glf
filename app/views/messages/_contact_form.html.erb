@@ -1,6 +1,6 @@
-<div class="height-70vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
-  <div id="contact" class="padding-5-l-r-m-5-l-r pt-5" style="position: absolute; bottom: -40px;">
-    <div class="margin-5-l-r mt-4 background-color-glf-white box-shadow-two-white min-height-65vh">
+<!-- <div class="min-height-70vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;"> -->
+  <div id="contact" class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="position: absolute; bottom: -40px; background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
+    <div class="margin-5-l-r mt-4 background-color-glf-white box-shadow-two-white">
       <%= form_for @message, url: messages_path, remote: true do |f| %>
       <div class="row py-auto">
         <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
@@ -33,4 +33,5 @@
       <%= render 'messages/flash' %>
     </div>
   </div>
-</div>
+<!-- </div>
+ -->
