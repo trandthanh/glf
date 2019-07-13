@@ -5,7 +5,7 @@
 <div class="mt-5 background-color-ghost-white text-center padding-5-t-b">
   <h1 class="text-color-charleston-green pt-5 pb-4 font-weight-400">Vendre un bien</h1>
   <div class="text-color-outer-space pb-5 tagline-top">
-    <h4 class="font-weight-100 padding-5-l-r-none-small"> ... </h4>
+    <h4 class="font-weight-100 padding-5-l-r-none-small">Une équipe de professionnels engagés à vendre votre bien au meilleur prix.</h4>
   </div>
 </div>
 
@@ -17,5 +17,52 @@
     <h5 class="m-0 font-weight-500">Proposer un bien</h5>
   </div>
 </div>
+
+<!-- div avec les cases -->
+
+<div class="my-5 margin-5-l-r py-5">
+  <div class="text-center pb-5">
+    <h3 class="text-color-warm-black">Notre obsession de la qualité<br>assure la satisfaction de nos clients</h3>
+  </div>
+  <div class="row">
+      <div class="col-md-4 col-sm-6 text-center padding-5-l-r pb-4">
+        <div class="text-center background-color-cases px-3 py-2 box-shadow-two-black h-100">
+          <div class="row my-4">
+            <div class="col-md-12">
+              <div class="float-left card-img-top">
+                <%= image_tag "support.png", style: "width: 70px; height: 70px;" %>
+              </div>
+            </div>
+          </div>
+          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Estimation sous 48h.</h5>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center padding-5-l-r pb-4">
+        <div class="text-center background-color-cases px-3 py-2 box-shadow-two-black h-100">
+          <div class="row my-4">
+            <div class="col-md-12">
+              <div class="float-left card-img-top">
+                <%= image_tag "building.png", style: "width: 70px; height: 70px;" %>
+              </div>
+            </div>
+          </div>
+          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Diagnostics gratuits pour tout mandat exclusif.</h5>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 text-center padding-5-l-r pb-4">
+        <div class="text-center background-color-cases px-3 py-2 box-shadow-two-black h-100">
+        <div class="row my-4">
+          <div class="col-md-12">
+            <div class="float-left card-img-top">
+              <%= image_tag "paint-roller.png", style: "width: 70px; height: 70px;" %>
+            </div>
+          </div>
+        </div>
+          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Sélection des acheteurs fiables et solvables.</h5>
+        </div>
+      </div>
+  </div>
+</div>
+
 
 <%= render 'shared/numbers' %>

@@ -26,12 +26,17 @@
   height: 50vh;
 }
 
-.height-65vh {
-  height: 65vh;
+.min-height-65vh {
+  min-height: fit-content;
 }
 
 .height-70vh {
-  height: 70vh;
+  min-height: 70vh;
+}
+
+.min-height-70vh {
+  min-height: 70vh;
+  height: fit-content;
 }
 
 .height-75vh {
