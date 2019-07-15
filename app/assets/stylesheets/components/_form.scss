@@ -7,6 +7,10 @@
   outline: none;
 }
 
+#contact select {
+  color: gray !important;
+}
+
 @include media-breakpoint-only(xs) {
   #contact textarea {
     width: 100%;
@@ -19,6 +23,22 @@
     padding: 5px 6px;
     border: none;
     background-color: rgba(0,0,0,0.04);
+  }
+  #contact input[type=file] {
+    color: gray !important;
+    border: none;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 5px 6px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
   }
 }
 @include media-breakpoint-only(sm) {
@@ -34,6 +54,23 @@
     border: none;
     background-color: rgba(0,0,0,0.04);
   }
+  #contact input[type=file] {
+    color: gray !important;
+    border: none;
+
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 5px 6px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
 }
 @include media-breakpoint-only(md) {
   #contact textarea {
@@ -48,6 +85,23 @@
     border: none;
     background-color: rgba(0,0,0,0.04);
   }
+  #contact input[type=file] {
+    color: gray !important;
+    border: none;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+
 }
 @include media-breakpoint-only(lg) {
   #contact textarea {
@@ -61,6 +115,22 @@
     padding: 10px 12px;
     border: none;
     background-color: rgba(0,0,0,0.04);
+  }
+  #contact input[type=file] {
+    border: none;
+    color: gray !important;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
   }
 }
 @include media-breakpoint-only(xl) {
@@ -76,4 +146,189 @@
     border: none;
     background-color: rgba(0,0,0,0.04);
   }
+  #contact input[type=file] {
+    border: none;
+    color: gray !important;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
 }
+
+// pour contact form 2
+
+#contact-2 input[type=submit] {
+  border: none;
+  width: 20%;
+}
+
+#contact-2 input:focus {
+  outline: none;
+}
+
+#contact-2 select {
+  color: gray !important;
+}
+
+@include media-breakpoint-only(xs) {
+  #contact-2 textarea {
+    width: 100%;
+    padding: 5px 6px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=text] {
+    width: 100%;
+    padding: 5px 6px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=file] {
+    color: gray !important;
+    border: none;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 5px 6px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+@include media-breakpoint-only(sm) {
+  #contact-2 textarea {
+    width: 100%;
+    padding: 5px 6px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=text] {
+    width: 100%;
+    padding: 5px 6px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=file] {
+    color: gray !important;
+    border: none;
+
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 5px 6px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+@include media-breakpoint-only(md) {
+  #contact-2 textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=text] {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=file] {
+    color: gray !important;
+    border: none;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+
+}
+@include media-breakpoint-only(lg) {
+  #contact-2 textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=text] {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=file] {
+    border: none;
+    color: gray !important;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+@include media-breakpoint-only(xl) {
+  #contact-2 textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=text] {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    background-color: rgba(0,0,0,0.04);
+  }
+  #contact-2 input[type=file] {
+    border: none;
+    color: gray !important;
+  }
+  .background-gray {
+    background-color: rgba(0,0,0,0.04);
+    border: none;
+    padding: 10px 12px;
+    color: gray !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+
