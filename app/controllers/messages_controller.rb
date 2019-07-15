@@ -9,10 +9,10 @@ class MessagesController < ApplicationController
         @message = Message.new
         @mail = "trandgthanh@gmail.com"
         format.html { render 'services/gestionlocative' }
-        format.js   { flash.now[:success] = @notice = "Thank you for your message. I'll get back to you soon!" }
+        format.js   { flash.now[:success] = @notice = "Merci pour votre message, nous revenons vers vous au plus vite !" }
       else
         format.html { render 'services/gestionlocative' }
-        format.js   { flash.now[:error] = @notice = "Message did not send." }
+        format.js   { flash.now[:error] = @notice = "Une erreur s'est produite, veuillez réessayer ou nous contacter au 01 44 18 18 18." }
       end
     end
   end
