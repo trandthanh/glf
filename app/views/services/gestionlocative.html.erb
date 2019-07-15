@@ -27,7 +27,7 @@
 <!-- div avec les cases -->
 
 <div class="my-5 margin-5-l-r py-5">
-  <div class="row">
+  <div class="row mx-0">
       <div class="col-md-4 col-sm-6 text-center padding-5-l-r pb-4">
         <div class="text-center background-color-cases px-3 py-2 box-shadow-two-black h-100">
           <div class="row my-4">
@@ -70,6 +70,12 @@
   </div>
 </div>
 
+<!-- texte photo -->
+
+<div class="my-5">
+  <%= render 'textphotoglf3' %>
+</div>
+
 <!-- div avec la case l'équipe -->
 
 <div class="my-5 margin-5-l-r pb-5">
@@ -100,4 +106,6 @@
 </div>
 
 <%= render 'shared/numbers' %>
-<%= render "messages/contact_form", mail: @mail %>
+<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
+  <%= render "messages/contact_form", mail: @mail %>
+</div>

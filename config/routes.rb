@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   # Static pages for services
   get 'services/gestion-locative', to: 'services#gestionlocative', mail: 'diane.jroussillon@gmail.com'
-  get 'services/devenir-locataire', to: 'services#devenirlocataire', mail: 'trandgthanh@gmail.com'
+  get 'services/devenir-locataire', to: 'services#devenirlocataire', mail: 'diane.jroussillon@gmail.com'
   get 'services/vendre', to: 'services#vendre'
   get 'services/acheter', to: 'services#acheter'
 
