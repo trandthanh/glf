@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Static pages routes
   get '/a-propos', to: 'pages#apropos'
   get '/contact', to: 'pages#contact'
-  get '/recrutement', to: 'pages#recrutement'
+  get '/recrutement', to: 'pages#recrutement', mail: 'diane.jroussillon@gmail.com'
   get '/syndic', to: 'pages#syndic'
 
   # Static pages for services
