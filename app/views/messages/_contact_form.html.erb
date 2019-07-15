@@ -1,37 +1,34 @@
-<!-- <div class="min-height-70vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;"> -->
-  <div id="contact" class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="position: absolute; bottom: -40px; background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
-    <div class="margin-5-l-r mt-4 background-color-glf-white box-shadow-two-white">
-      <%= form_for @message, url: messages_path, remote: true do |f| %>
-      <div class="row py-auto">
-        <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
-          <h3 class="text-color-warm-black">Faire une candidature spontannée</h3>
-        </div>
-        <div class="col-md-6 col-sm-12 px-5 form-group">
-          <%= f.text_field :first_name, required: true, placeholder: 'Prénom' %>
-        </div>
-        <div class="col-md-6 col-sm-12 px-5 form-group">
-          <%= f.text_field :last_name, required: true, placeholder: 'Nom' %>
-        </div>
-        <div class="col-md-6 col-sm-12 px-5 form-group">
-          <%= f.text_field :email, required: true, placeholder: 'Email' %>
-        </div>
-        <div class="col-md-6 col-sm-12 px-5 form-group">
-          <%= f.text_field :phone, required: true, placeholder: 'Numéro de téléphone' %>
-        </div>
-        <div class="col-md-12 col-sm-12 px-5 form-group">
-          <%= f.text_area :body, rows: 3, cols: 100, required: true, placeholder: 'Message' %>
-        </div>
-          <%= f.hidden_field :recipient_email, value: @mail %>
-        <div class="mt-n5 text-right px-5 mb-5 margin-l-60" style="z-index: 6;">
-          <%= f.submit 'Envoyer', class: 'button-crimson2 box-shadow-two-black font-weight-500', style: 'min-width: 150px; font-size: 18px;' %>
-        </div>
+<div id="contact" class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="position: absolute; bottom: -40px; background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
+  <div class="margin-5-l-r mt-4 background-color-glf-white box-shadow-two-white">
+    <%= form_for @message, url: messages_path, remote: true do |f| %>
+    <div class="row py-auto">
+      <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
+        <h3 class="text-color-warm-black">Faire une candidature spontannée</h3>
       </div>
-      <% end %>
+      <div class="col-md-6 col-sm-12 px-5 form-group">
+        <%= f.text_field :first_name, required: true, placeholder: 'Prénom' %>
+      </div>
+      <div class="col-md-6 col-sm-12 px-5 form-group">
+        <%= f.text_field :last_name, required: true, placeholder: 'Nom' %>
+      </div>
+      <div class="col-md-6 col-sm-12 px-5 form-group">
+        <%= f.text_field :email, required: true, placeholder: 'Email' %>
+      </div>
+      <div class="col-md-6 col-sm-12 px-5 form-group">
+        <%= f.text_field :phone, required: true, placeholder: 'Numéro de téléphone' %>
+      </div>
+      <div class="col-md-12 col-sm-12 px-5 form-group">
+        <%= f.text_area :body, rows: 3, cols: 100, required: true, placeholder: 'Message' %>
+      </div>
+        <%= f.hidden_field :recipient_email, value: @mail %>
+      <div class="mt-n5 text-right px-5 mb-5 margin-l-60" style="z-index: 6;">
+        <%= f.submit 'Envoyer', class: 'button-crimson2 box-shadow-two-black font-weight-500', style: 'min-width: 150px; font-size: 18px;' %>
+      </div>
     </div>
-
-    <div class="col-md-6" id="flash-message">
-      <%= render 'messages/flash' %>
-    </div>
+    <% end %>
   </div>
-<!-- </div>
- -->
+
+  <div class="col-md-6" id="flash-message">
+    <%= render 'messages/flash' %>
+  </div>
+</div>
