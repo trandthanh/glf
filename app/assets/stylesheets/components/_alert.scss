@@ -3,4 +3,20 @@
 //   bottom: 16px;
 //   right: 16px;
 //   z-index: 1000;
-// }
+
+.alert-success {
+  background-color: transparent;
+  border: none;
+  color: #10ae68;
+}
+
+.alert-warning {
+  background-color: transparent;
+  border: none;
+}
+
+.alert-danger {
+  background-color: transparent;
+  border: none;
+  color: #c90d11;
+}
