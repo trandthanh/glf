@@ -1,8 +1,8 @@
 // Test for ajax success
-console.log("This is the create.js.erb file");
+// console.log("This is the create.js.erb file");
 // Render flash message
 
 $("#contact").html("<%= j render('contact_form', locals: { mail: @mail }) %>");
-$('#flash-message').html("<%= escape_javascript render 'flash' %>").delay(3000).fadeOut(4000);
+$('#flash-message').html("<%= escape_javascript render 'flash' %>").delay(2000).fadeOut(4000);
 
 
