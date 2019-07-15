@@ -1,7 +1,7 @@
-<div id="contact" class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="position: absolute; bottom: -40px; background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
-  <div class="margin-5-l-r mt-4 background-color-glf-white box-shadow-two-white">
+<div id="contact" class="margin-5-l-r mt-4" style="background-color: transparent; position: inherit; bottom: -70px;">
+  <div class="background-color-glf-white box-shadow-two-white">
     <%= form_for @message, url: messages_path, remote: true do |f| %>
-    <div class="row py-auto">
+    <div class="row py-auto mx-0">
       <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
         <h3 class="text-color-warm-black">Faire une candidature spontannée</h3>
       </div>
@@ -26,9 +26,10 @@
       </div>
     </div>
     <% end %>
-  </div>
 
-  <div class="col-md-6" id="flash-message">
-    <%= render 'messages/flash' %>
   </div>
+</div>
+
+<div class="col-md-6" id="flash-message">
+  <%= render 'messages/flash' %>
 </div>
