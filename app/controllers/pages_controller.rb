@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def contact
     @message = Message.new(params[:message])
+    @contact = true
   end
 
   def recrutement

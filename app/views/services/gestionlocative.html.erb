@@ -13,9 +13,9 @@
 
 
 <div class="d-flex justify-content-center margin-top-1-6">
-  <div class="button-crimson2 box-shadow-two-black">
+  <a href="#gestion-loc-propo"><div class="button-crimson2 box-shadow-two-black">
     <h5 class="m-0 font-weight-500">Proposer un bien</h5>
-  </div>
+  </div></a>
 </div>
 
 <!-- texte photo -->
@@ -38,7 +38,7 @@
             </div>
           </div>
           <h4 class="text-color-charleston-green font-weight-500 mb-3 mt-4">Conseil et représentation</h4>
-          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Conseils pour vos démarches fiscales et représentaion auprès des notaires et des administrations.</h5>
+          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Conseils pour vos démarches fiscales et représentation auprès des notaires et des administrations.</h5>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 text-center padding-5-l-r pb-4">
@@ -89,7 +89,7 @@
           </div>
           <div class="col-md-10">
             <h3 class="text-color-warm-black py-3 mb-0">Une équipe dédiée</h3>
-            <h4 class="text-color-outer-space font-weight-400 pt-2 pb-4 small-text-line-height">Chaque propriétaire dispose d’une équipe dédiée composée de 5 personnes, pour que vous ayez toujours un interlocuteur qui connaisse votre dossier qui vous réponde.</h4>
+            <h4 class="text-color-outer-space font-weight-400 pt-2 pb-4 small-text-line-height">Chaque propriétaire dispose d’une équipe dédiée composée de 5 personnes, pour que vous ayez toujours un interlocuteur qui connaisse votre dossier pour vous répondre.</h4>
           </div>
           <div class="col-md-12 text-color-outer-space basile">
             <ul class="flexteam justify-content-between" id="listbullet">
@@ -106,6 +106,6 @@
 </div>
 
 <%= render 'shared/numbers' %>
-<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
-  <%= render "messages/contact_form", mail: @mail %>
+<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="gestion-loc-propo" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
+  <%= render "messages/contact_form", mail: @mail, title: "Proposer un bien à la gestion locative" %>
 </div>

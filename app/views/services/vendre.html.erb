@@ -5,7 +5,7 @@
 <div class="mt-5 background-color-ghost-white text-center padding-5-t-b">
   <h1 class="text-color-charleston-green pt-5 pb-4 font-weight-400">Vendre un bien</h1>
   <div class="text-color-outer-space pb-5 tagline-top">
-    <h4 class="font-weight-100 padding-5-l-r-none-small">Une équipe de professionnels engagés à vendre votre bien au meilleur prix.</h4>
+    <h4 class="font-weight-100 padding-5-l-r-none-small">Une équipe de professionnels qui s'engagent à vendre votre bien au meilleur prix.</h4>
   </div>
 </div>
 
@@ -13,9 +13,9 @@
 
 
 <div class="d-flex justify-content-center margin-top-1-6">
-  <div class="button-crimson2 box-shadow-two-black">
+  <a href="#vendre-form"><div class="button-crimson2 box-shadow-two-black">
     <h5 class="m-0 font-weight-500">Proposer un bien</h5>
-  </div>
+  </div></a>
 </div>
 
 <!-- div avec les cases -->
@@ -58,7 +58,7 @@
             </div>
           </div>
         </div>
-          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Sélection des acheteurs fiables et solvables.</h5>
+          <h5 class="text-color-outer-space font-weight-100 mt-3 mb-4 small-text-line-height">Sélection d'acheteurs fiables et solvables.</h5>
         </div>
       </div>
   </div>
@@ -67,6 +67,6 @@
 
 <%= render 'shared/numbers' %>
 
-<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
-  <%= render "messages/contact_form", mail: @mail %>
+<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="vendre-form" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
+  <%= render "messages/contact_form", mail: @mail, title: "Proposer un bien à la vente" %>
 </div>
