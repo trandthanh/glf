@@ -3,9 +3,18 @@
 
 
 // Voir avec Diane
-
 body {
   background-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 a {
@@ -24,3 +33,5 @@ a:hover {
   top: 0;
   left: 0;
 }
+
+
