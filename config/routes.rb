@@ -4,15 +4,15 @@ Rails.application.routes.draw do
 
   # Static pages routes
   get '/a-propos', to: 'pages#apropos'
-  get '/contact', to: 'pages#contact'
+  get '/contact', to: 'pages#contact', mail: 'diane.jroussillon@gmail.com', titre: "Nous transmettre un message"
   get '/recrutement', to: 'pages#recrutement', mail: 'diane.jroussillon@gmail.com'
   get '/syndic', to: 'pages#syndic'
 
   # Static pages for services
-  get 'services/gestion-locative', to: 'services#gestionlocative', mail: 'diane.jroussillon@gmail.com'
-  get 'services/devenir-locataire', to: 'services#devenirlocataire', mail: 'diane.jroussillon@gmail.com'
-  get 'services/vendre', to: 'services#vendre'
-  get 'services/acheter', to: 'services#acheter'
+  get 'services/gestion-locative', to: 'services#gestionlocative', mail: 'diane.jroussillon@gmail.com', titre: "Proposer un bien à la gestion locative"
+  get 'services/devenir-locataire', to: 'services#devenirlocataire', mail: 'diane.jroussillon@gmail.com', titre: "Vous cherchez un bien à la location"
+  get 'services/vendre', to: 'services#vendre', mail: 'diane.jroussillon@gmail.com', titre: "Proposer un bien à la vente"
+  get 'services/acheter', to: 'services#acheter', mail: 'diane.jroussillon@gmail.com', titre: "Vous cherchez à investir"
 
   # contact form
   resources :messages, only: [:create]
