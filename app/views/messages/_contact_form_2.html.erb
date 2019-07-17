@@ -5,34 +5,34 @@
       <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
         <h3 class="text-color-warm-black">Faire une candidature spontannée</h3>
       </div>
-      <div class="col-md-6 col-sm-12 pl-5 pr-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <%= f.text_field :prenom, required: true, placeholder: 'Prénom' %>
       </div>
-      <div class="col-md-6 col-sm-12 pr-5 pl-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <%= f.text_field :nom, required: true, placeholder: 'Nom' %>
       </div>
-      <div class="col-md-6 col-sm-12 pl-5 pr-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <%= f.text_field :email, required: true, placeholder: 'Email' %>
       </div>
-      <div class="col-md-6 col-sm-12 pr-5 pl-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <%= f.text_field :telephone, required: true, placeholder: 'Numéro de téléphone' %>
       </div>
-      <div class="col-md-6 col-sm-12 pl-5 pr-4  form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <div class="background-gray">
           <%= f.label :cv, 'CV' %>
-          <%= f.file_field :cv, required: true, placeholder: 'CV' %>
+          <%= f.file_field :cv, required: true %>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12 pr-5 pl-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <div class="background-gray">
           <%= f.label :poste_recherche, 'Poste recherché' %>
           <%= f.select :poste_recherche, options_for_select(['COPROPRIETE', 'Assistant(e) Copropriété', 'Comptable Copropriété', 'Gestionnaire Copropriété', 'Principal de Copropriété', 'Responsable Comptable Copropriété', 'GERANCE', 'Assistant(e) Gérance', 'Chargé (e) de location', 'Comptable Gérance', 'Gestionnaire Gérance', 'Principal de Gérance', 'Responsable Comptable Gérance']) %>
         </div>
       </div>
-      <div class="col-md-6 col-sm-12 pl-5 pr-4 form-group">
+      <div class="col-md-6 col-sm-12 px-5 form-group">
         <div class="background-gray">
           <%= f.label :lm, 'Lettre de motivation' %>
-          <%= f.file_field :lm, required: true, placeholder: 'Lettre de motivation' %>
+          <%= f.file_field :lm, required: true %>
         </div>
       </div>
       <div class="col-md-12 col-sm-12 px-5 form-group">
