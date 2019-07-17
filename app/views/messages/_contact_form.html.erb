@@ -1,35 +1,36 @@
 <div id="contact" style="position: relative;">
   <div class="margin-5-l-r background-color-glf-white box-shadow-two-white mt-4" style="position: inherit; bottom: -50px;">
-    <%= form_for @message, url: messages_path, remote: true do |f| %>
-    <div class="row py-auto mx-0">
       <div class="col-md-12 col-sm-12 px-5 padding-t-5 padding-b-4">
-        <h3 class="text-color-warm-black"><%= title %></h3>
+        <h3 class="text-color-warm-black"><%= @titre %></h3>
       </div>
-      <div class="col-md-6 col-sm-12 px-5 form-group">
-        <%= f.text_field :prenom, required: true, placeholder: 'Prénom' %>
-      </div>
-      <div class="col-md-6 col-sm-12 px-5 form-group">
-        <%= f.text_field :nom, required: true, placeholder: 'Nom' %>
-      </div>
-      <div class="col-md-6 col-sm-12 px-5 form-group">
-        <%= f.text_field :email, required: true, placeholder: 'Email' %>
-      </div>
-      <div class="col-md-6 col-sm-12 px-5 form-group">
-        <%= f.text_field :telephone, required: true, placeholder: 'Numéro de téléphone' %>
-      </div>
-      <div class="col-md-12 col-sm-12 px-5 form-group">
-        <%= f.text_area :message, rows: 3, cols: 100, required: true, placeholder: 'Message' %>
-      </div>
-        <%= f.hidden_field :recipient_email, value: @mail %>
-      <div class="mt-n5 text-right px-5 mb-2 margin-l-60" style="z-index: 6;">
-        <%= f.submit 'Envoyer', class: 'button-crimson2 box-shadow-two-black font-weight-500', style: 'min-width: 150px; font-size: 18px;' %>
-      </div>
-      <div class="height-flash-min col-md-12 col-sm-12 font-weight-500">
-        <div class="px-4" id="flash-message">
-          <%= render 'messages/flash' %>
+      <%= form_for @message, url: messages_path, remote: true do |f| %>
+    <div class="row py-auto mx-0">
+        <div class="col-md-6 col-sm-12 px-5 form-group">
+          <%= f.text_field :prenom, required: true, placeholder: 'Prénom' %>
+        </div>
+        <div class="col-md-6 col-sm-12 px-5 form-group">
+          <%= f.text_field :nom, required: true, placeholder: 'Nom' %>
+        </div>
+        <div class="col-md-6 col-sm-12 px-5 form-group">
+          <%= f.text_field :email, required: true, placeholder: 'Email' %>
+        </div>
+        <div class="col-md-6 col-sm-12 px-5 form-group">
+          <%= f.text_field :telephone, required: true, placeholder: 'Numéro de téléphone' %>
+        </div>
+        <div class="col-md-12 col-sm-12 px-5 form-group">
+          <%= f.text_area :message, rows: 3, cols: 100, required: true, placeholder: 'Message' %>
+        </div>
+          <%= f.hidden_field :recipient_email, value: @mail %>
+          <%= f.hidden_field :titre, value: @titre %>
+        <div class="mt-n5 text-right px-5 mb-2 margin-l-60" style="z-index: 6;">
+          <%= f.submit 'Envoyer', class: 'button-crimson2 box-shadow-two-black font-weight-500', style: 'min-width: 150px; font-size: 18px;' %>
+        </div>
+        <div class="height-flash-min col-md-12 col-sm-12 font-weight-500">
+          <div class="px-4" id="flash-message">
+            <%= render 'messages/flash' %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
   </div>
 </div>

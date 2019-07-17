@@ -13,7 +13,7 @@
 
 
 <div class="d-flex justify-content-center margin-top-1-6">
-  <a href="#gestion-loc-propo"><div class="button-crimson2 box-shadow-two-black">
+  <a href="#gestion-loc-proposition"><div class="button-crimson2 box-shadow-two-black">
     <h5 class="m-0 font-weight-500">Proposer un bien</h5>
   </div></a>
 </div>
@@ -106,6 +106,6 @@
 </div>
 
 <%= render 'shared/numbers' %>
-<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="gestion-loc-propo" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
-  <%= render "messages/contact_form", mail: @mail, title: "Proposer un bien à la gestion locative" %>
+<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="gestion-loc-proposition" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
+  <%= render "messages/contact_form", mail: @mail, titre: @titre %>
 </div>

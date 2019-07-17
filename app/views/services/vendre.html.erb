@@ -13,7 +13,7 @@
 
 
 <div class="d-flex justify-content-center margin-top-1-6">
-  <a href="#vendre-form"><div class="button-crimson2 box-shadow-two-black">
+  <a href="#vendre-proposition"><div class="button-crimson2 box-shadow-two-black">
     <h5 class="m-0 font-weight-500">Proposer un bien</h5>
   </div></a>
 </div>
@@ -67,6 +67,6 @@
 
 <%= render 'shared/numbers' %>
 
-<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="vendre-form" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
-  <%= render "messages/contact_form", mail: @mail, title: "Proposer un bien à la vente" %>
+<div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" id="vendre-proposition" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center;">
+  <%= render "messages/contact_form", mail: @mail, titre: @titre %>
 </div>

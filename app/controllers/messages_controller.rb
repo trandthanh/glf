@@ -7,7 +7,8 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message.deliver
         @message = Message.new
-        @mail = "trandgthanh@gmail.com"
+        @mail = params[:message][:recipient_email]
+        @titre = params[:message][:titre]
         format.html { render 'services/gestionlocative' }
         format.js   { flash[:success] = @notice = "Merci pour votre message, nous revenons vers vous au plus vite !" }
       else
