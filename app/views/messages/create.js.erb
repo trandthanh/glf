@@ -5,5 +5,3 @@
 $("#contact-2").html("<%= j render('contact_form_2', locals: { mail: @mail }) %>");
 $("#contact").html("<%= j render('contact_form', locals: { mail: @mail, titre: @titre}) %>");
 $('#flash-message').html("<%= escape_javascript render 'flash' %>").delay(2000).fadeOut(4000);
-
-

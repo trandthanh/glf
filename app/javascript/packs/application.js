@@ -12,3 +12,9 @@ if (document.querySelector(".navbar-mobile")) {
 if (document.querySelector(".navbar")) {
   scrolledNav();
 }
+
+$(window).on("load", function() {
+  console.log('loaded');
+    $('#flash-message').fadeOut(1000);
+  }
+);
