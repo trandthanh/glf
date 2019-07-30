@@ -55,3 +55,19 @@
   background-color: white;
   z-index: 25;
 }
+
+.accueil {
+  opacity: 1;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.accueil:hover {
+  opacity: 0.7;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
