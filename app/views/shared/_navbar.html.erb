@@ -8,6 +8,10 @@
 
   <div class="d-flex justify-content-between align-items-center width-navbar">
 
+    <%= link_to root_path do %>
+      <p class="m-0 font-weight-500 extranethover mr-1">Accueil</p>
+    <% end %>
+
     <div class="dropdown">
       <p class="m-0 font-weight-500 text-color-charleston-green cursor-pointer">Les services <span class="ml-1 text-color-crimson"><i class="fas fa-chevron-down"></i></span></p>
       <div class="dropdown-content ml-n5">
@@ -37,7 +41,7 @@
     </div>
 
     <div class="">
-      <a href="https://www.orchestrav2.egiweb.net" target="_blank"><p class="m-0 font-weight-500 extranethover">Extranet</p></a>
+      <a href="https://www.orchestrav2.egiweb.net" target="_blank"><p class="m-0 font-weight-500 extranethover mr-1">Extranet</p></a>
     </div>
 
     <%= link_to contact_path do %>
@@ -102,6 +106,9 @@
         <h4 class="text-color-white m-0">Recrutement</h4>
       <% end %>
       <a href="https://www.orchestrav2.egiweb.net" target="_blank"><h4 class="text-color-white m-0">Extranet</h4></a>
+      <%= link_to root_path do %>
+        <h4 class="text-color-white m-0">Accueil</h4>
+      <% end %>
     </div>
   </div>
 
