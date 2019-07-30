@@ -14,7 +14,6 @@ if (document.querySelector(".navbar")) {
 }
 
 $(window).on("load", function() {
-  console.log('loaded');
     $('#flash-message').fadeOut(1000);
   }
 );
