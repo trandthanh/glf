@@ -15,6 +15,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'meta-tags-helpers', '~> 0.2.0'
 
 # message
 gem 'jquery-rails'
