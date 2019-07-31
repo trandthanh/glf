@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
+  get '/accueil', to: 'pages#home'
 
   # Static pages routes
   get '/a-propos', to: 'pages#apropos'
