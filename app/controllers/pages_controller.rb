@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def accueil
   end
 
+  def rejoignez
+  end
+
   def contact
     @message = Message.new(params[:message])
     @contact = true
