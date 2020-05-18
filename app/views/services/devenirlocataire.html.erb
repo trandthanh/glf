@@ -21,6 +21,37 @@
 
 <div class="my-5"></div>
 
+  <div class="row p-5">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <%= link_to asset_path('fiche_renseignement_Alexis_Boubkeur.xls') do %>
+      <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+        Fiche renseignement Alexis Boubkeur
+      </div>
+      <% end %>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <%= link_to asset_path('fiche_renseignement_Audrey_Gérard.xls') do %>
+      <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+        Fiche renseignement Audrey Gérard
+      </div>
+      <% end %>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <%= link_to asset_path('fiche_renseignement_Brandon_NACASS.xls') do %>
+      <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+        Fiche renseignement Brandon Nacass
+      </div>
+      <% end %>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <%= link_to asset_path('Liste_dossier_complet.docx') do %>
+      <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+        Liste pour dossier complet
+      </div>
+      <% end %>
+    </div>
+  </div>
+
 <div class="padding-5-l-r-m-5-l-r pt-5 min-height-65vh" style="background-image: url('<%= image_path "republique.png" %>'); background-size: cover; background-position: center; position: relative;">
   <%= render "messages/contact_form", mail: @mail, titre: @titre %>
 </div>
