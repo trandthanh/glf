@@ -35,6 +35,7 @@
             <%= link_to "Qui sommes-nous ?", a_propos_path, class: "text-color-charleston-green" %>
             <%= link_to "Contact", contact_path, class: "text-color-charleston-green" %>
             <%= link_to "Recrutement", recrutement_path, class: "text-color-charleston-green" %>
+            <%= link_to "Documents légaux", documents_legaux_path, class: "text-color-charleston-green" %>
           </div>
         </div>
       </div>
@@ -104,6 +105,9 @@
       <% end %>
       <%= link_to recrutement_path do %>
         <h4 class="text-color-white m-0">Recrutement</h4>
+      <% end %>
+      <%= link_to documents_legaux_path do %>
+        <h4 class="text-color-white m-0">Documents légaux</h4>
       <% end %>
       <a href="https://www.orchestrav2.egiweb.net" target="_blank"><h4 class="text-color-white m-0">Extranet</h4></a>
       <%= link_to root_path do %>

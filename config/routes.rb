@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact', mail: 'courriers@glf.eu', titre: "Nous transmettre un message"
   # 1
   get '/recrutement', to: 'pages#recrutement', mail: 'candidature@glf.eu'
+
+  get '/documents_legaux', to: 'pages#documents_legaux', mail: 'courriers@glf.eu'
   # 2
   get 'services/gestion-locative', to: 'services#gestionlocative', mail: 'gestion@glf.eu', titre: "Proposer un bien à la gestion locative"
   # 3

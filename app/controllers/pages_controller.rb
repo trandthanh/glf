@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :apropos, :contact, :recrutement, :syndic]
+  skip_before_action :authenticate_user!, only: [:home, :apropos, :contact, :recrutement, :syndic, :documents_legaux]
 
   def home
     @disable_footer = true
@@ -21,6 +21,11 @@ class PagesController < ApplicationController
 
   def recrutement
     @message = Message.new(params[:message])
+  end
+
+  def documents_legaux
+    @message = Message.new(params[:message])
+    @contact = true
   end
 
   def syndic
