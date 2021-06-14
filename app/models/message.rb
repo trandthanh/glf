@@ -15,7 +15,7 @@ class Message < MailForm::Base
       {
         subject: "Formulaire de contact",
         to: "#{recipient_email}",
-        from: %("#{prenom} #{nom}" <#{email}>)
+        from: %("#{prenom} #{nom} <#{email}>")
       }
   end
 end
