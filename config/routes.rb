@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get '/accueil', to: 'pages#home'
   get '/rejoignez', to: 'pages#home'
 
-
   # Static pages routes
   get '/a-propos', to: 'pages#apropos'
   get '/syndic', to: 'pages#syndic'
@@ -35,6 +34,9 @@ Rails.application.routes.draw do
   # 5
   get 'services/acheter', to: 'services#acheter', mail: 'transactions@glf.eu', titre: "Vous cherchez à investir"
   # 6
+
+  # get 'ftp/new', to: 'ftp#new'
+  # post 'ftp/upload', to: 'ftp#upload'
 
 end
 

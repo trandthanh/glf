@@ -17,6 +17,11 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'meta-tags-helpers', '~> 0.2.0'
 
+# serveur ftp
+gem 'net-sftp'
+gem 'ed25519', '~> 1.2', '>= 1.2.4'
+gem 'bcrypt_pbkdf', '~> 1.0.0.alpha1'
+
 # message
 gem 'jquery-rails'
 gem 'mail_form'
