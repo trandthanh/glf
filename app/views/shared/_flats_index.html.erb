@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-between pb-5">
+  <div class="w-75 row m-0 padding-5-l-r-m-5-l-r text-center">
+
+    <%= @flats.each do |flat| %>
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+      <%= link_to flat_path(flat) do %>
+        <div class="card w-full">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 250px; object-fit: cover; object-position: center;" alt="Card image cap">
+          <div class="p-4">
+            <div class="d-flex justify-content-between align-items-center pb-3">
+              <div><%= flat.address %></div>
+              <div>1000€/mois</div>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>3p</div>
+              <div>172m2</div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+
+  <div class="position-relative w-25">
+    <div class="position-sticky bg-dark" style="top: 150px;">
+      <div id="map"
+        style="width: 100%; height: 600px;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+    </div>
+  </div>
+</div>

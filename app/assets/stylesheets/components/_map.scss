@@ -1,0 +1,21 @@
+.mapboxgl-popup {
+  max-width: 150px;
+  a {
+    outline: none;
+  }
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0px !important;
+}
+
+.mapboxgl-popup-close-button {
+  font-size: 24px;
+  color: white !important;
+}
+
+.mapboxgl-popup-close-button:focus {
+  outline: none !important;
+}

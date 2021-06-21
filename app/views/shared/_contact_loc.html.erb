@@ -1,0 +1,35 @@
+<h3 class="text-color-warm-black text-center py-3 mb-0" id="contact_loc">Pour postuler à un de nos appartements</h3>
+
+<div class="row p-5 text-center">
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+    <%= link_to asset_path('fiche_renseignement.xls') do %>
+    <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+      Fiche de renseignement
+    </div>
+    <% end %>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 mb-2">
+    <%= link_to asset_path('Liste_dossier_complet.docx') do %>
+    <div class="p-3 text-center background-color-warm-black text-white h-100 vertical-align-center">
+      Liste pour dossier complet
+    </div>
+    <% end %>
+  </div>
+  <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"></div>
+</div>
+
+<div class="pb-5 padding-5-l-r-none-small mx-5">
+  <h5 class="text-color-outer-space font-weight-400 pt-2 pb-2 small-text-line-height">Merci d’envoyer la fiche de renseignement dûment complétée uniquement au négociateur en charge du bien* :</h5>
+  <ul>
+    <li><h5 class="text-color-outer-space font-weight-400 small-text-line-height">Audrey : <%= link_to "audrey.locations@glf.eu", "mailto:audrey.locations@glf.eu", class: "mb-0" %></h5></li>
+    <li><h5 class="text-color-outer-space font-weight-400 small-text-line-height">Micaël : <%= link_to "micael.locations@glf.eu", "mailto:micael.locations@glf.eu", class: "mb-0" %></h5></li>
+    <li><h5 class="text-color-outer-space font-weight-400 small-text-line-height">Charles : <%= link_to "charles.locations@glf.eu", "mailto:charles.locations@glf.eu", class: "mb-0" %></h5></li>
+    <li><h5 class="text-color-outer-space font-weight-400 small-text-line-height">Brandon : <%= link_to "brandon.locations@glf.eu", "mailto:brandon.locations@glf.eu", class: "mb-0" %></h5></li>
+  </ul>
+  <h6 class="text-color-outer-space font-weight-100 mt-1 mb-1 small-text-line-height"><i>
+  * Le nom du négociateur en charge est dans l’annonce <%= link_to 'Seloger', 'https://www.seloger.com/professionnels/agences-immobilieres/paris-3eme-75/agency-54698.htm' %></i></h6>
+  <h6 class="text-color-outer-space font-weight-100 mt-1 mb-1 small-text-line-height"><i>
+  ** Vous enverrez par mail également tous les documents composants votre dossier une fois la visite effectuée.</i>
+  </h6>
+</div>

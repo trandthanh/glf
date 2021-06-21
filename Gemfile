@@ -22,6 +22,12 @@ gem 'net-sftp'
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'bcrypt_pbkdf', '~> 1.0.0.alpha1'
 
+# unzip
+gem 'rubyzip'
+
+# geocoding
+gem 'geocoder'
+
 # message
 gem 'jquery-rails'
 gem 'mail_form'
