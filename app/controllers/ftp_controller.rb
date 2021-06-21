@@ -18,7 +18,7 @@ class FtpController < ApplicationController
     csv_path = File.expand_path(File.dirname(__FILE__) + "../../../storage/csv/annonce_unzip")
     extract_zip(filepath, csv_path)
     
-    csv_options = { col_sep: '!#', quote_char: '"', encoding: "Windows-1252" }
+    csv_options = { col_sep: '!#', quote_char: '"', headers: :first_row, header_converters: :symbol, encoding: "Windows-1252" }
      CSV.foreach(File.expand_path(File.dirname(__FILE__) + "../../../storage/csv/annonce_unzip/Annonces.csv"), csv_options) do |row|
       puts "#{row[0]}, #{row[1]}"
       raise
