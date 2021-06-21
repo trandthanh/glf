@@ -58,3 +58,38 @@
 .height-100vh {
   height: 100vh;
 }
+
+.height-desktop-index {
+  height: 13vh;
+}
+
+.height-card-infowindow {
+  height: 100px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-img-top {
+  height: 250px;
+}
+
+#map {
+  height: 600px;
+}
+
+@media (max-width: 768px) {
+  .height-desktop-index {
+    height: 0vh;
+  }
+  .height-card-infowindow {
+    height: 60px;
+    object-fit: cover;
+    width: 100%;
+  }
+  .card-img-top {
+    height: 150px;
+  }
+  #map {
+    height: 250px;
+  }
+}

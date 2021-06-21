@@ -110,6 +110,7 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    pagy (3.14.0)
     pg (0.21.0)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -222,6 +223,7 @@ DEPENDENCIES
   mail_form
   meta-tags-helpers (~> 0.2.0)
   net-sftp
+  pagy
   pg (~> 0.21)
   pry-byebug
   pry-rails

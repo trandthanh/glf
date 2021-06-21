@@ -28,6 +28,9 @@ gem 'rubyzip'
 # geocoding
 gem 'geocoder'
 
+# pagination
+gem 'pagy'
+
 # message
 gem 'jquery-rails'
 gem 'mail_form'
