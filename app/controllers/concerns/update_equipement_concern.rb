@@ -1,0 +1,46 @@
+module UpdateEquipementConcern
+  def update_equipement_attributes(equipement, row)
+    equipement.update_attributes(
+      type_de_chauffage: row[:type_de_chauffage],
+      type_de_cuisine: row[:type_de_cuisine],
+      orientation_sud: row[:orientation_sud],
+      orientation_est: row[:orientation_est],
+      orientation_ouest: row[:orientation_ouest],
+      orientation_nord: row[:orientation_nord],
+      nb_balcons: row[:nb_balcons].to_i,
+      sf_balcon: row[:sf_balcon].to_i,
+      ascenseur: row[:ascenseur],
+      cave: row[:cave],
+      nb_de_parkings: row[:nb_de_parkings].to_i,
+      nb_de_boxes: row[:nb_de_boxes].to_i,
+      gardien: row[:gardien],
+      terrasse: row[:terrasse],
+      nb_de_personnes: row[:nb_de_personnes].to_i,
+      type_de_rsidence: row[:type_de_rsidence],
+      situation: row[:situation],
+      nb_de_lits_doubles: row[:nb_de_lits_doubles].to_i,
+      nb_de_lits_simples: row[:nb_de_lits_simples].to_i,
+      alarme: row[:alarme],
+      cble_tv: row[:cble_tv],
+      calme: row[:calme],
+      climatisation: row[:climatisation],
+      piscine: row[:piscine],
+      amnagement_pour_handicaps: row[:amnagement_pour_handicaps],
+      animaux_accepts: row[:animaux_accepts],
+      chemine: row[:chemine],
+      conglateur: row[:conglateur],
+      four: row[:four],
+      lavevaisselle: row[:lavevaisselle],
+      microondes: row[:microondes],
+      placards: row[:placards],
+      tlphone: row[:tlphone],
+      proche_lac: row[:proche_lac],
+      proche_tennis: row[:proche_tennis],
+      proche_pistes_de_ski: row[:proche_pistes_de_ski],
+      vue_dgage: row[:vue_dgage],
+      duplex: row[:duplex],
+      mandat_en_exclusivit: row[:mandat_en_exclusivit]
+    )
+    equipement.save!
+  end
+end

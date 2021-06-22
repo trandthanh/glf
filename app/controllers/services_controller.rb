@@ -10,7 +10,7 @@ class ServicesController < ApplicationController
   def devenirlocataire
     @message = Message.new(params[:message])
     @devenirloc = true
-    @pagy, @flats = pagy(Flat.all, items: 10)
+    @pagy, @flats = pagy(Flat.all.where(type_dannonce: "location"), items: 10)
     mapMarkers(@flats)
   end
   
@@ -22,7 +22,7 @@ class ServicesController < ApplicationController
   def acheter
     @message = Message.new(params[:message])
     @acheterbien = true
-    @pagy, @flats = pagy(Flat.all, items: 10)
+    @pagy, @flats = pagy(Flat.all.where(type_dannonce: "vente"), items: 10)
     mapMarkers(@flats)
   end
 

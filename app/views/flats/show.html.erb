@@ -31,17 +31,57 @@
 
     <div class="col-12 col-md-6 col-lg-8">
       <div class="border-bottom mb-4">
-        <h1 class="text-color-warm-black py-3 mb-0">Titre</h1>
-        <span>200 m2</span><span class="px-2 font-size-32px"></span><span>6 pièces</span>
-        <p>13 rue de tralali, 75006 paris </p>
+        <h1 class="text-color-warm-black py-3 mb-0"><%= @flat.libelle %></h1>
+        <span><%= @flat.surface %> m2</span><span class="px-2 font-size-32px"></span><% if @flat.nb_de_pieces != 0 %><span><%= @flat.nb_de_pieces %> pièces</span><% end %>
+        <p><%= @flat.cp %> - <%= @flat.ville %></p>
       </div>
       <div class="border-bottom mb-4">
         <h3 class="text-color-warm-black py-3 mb-0">Description</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi necessitatibus vel sint quia, veritatis consequatur neque molestias illo quidem quae sed autem natus nulla maiores dignissimos eveniet dicta error veniam!</p>
+        <p><%= @flat.descriptif.html_safe %></p>
       </div>
       <div class="border-bottom mb-4">
         <h3 class="text-color-warm-black py-3 mb-0">Equipements</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi necessitatibus vel sint quia, veritatis consequatur neque molestias illo quidem quae sed autem natus nulla maiores dignissimos eveniet dicta error veniam!</p>
+        <div class="row mx-0">
+          <% if @flat.equipement.type_de_chauffage != "" %><div class="col-6"><%= 'type_de_chauffage : ' + @flat.equipement.type_de_chauffage %></div><% end %>
+          <% if @flat.equipement.type_de_cuisine != "" %><div class="col-6"><%= 'type_de_cuisine : ' + @flat.equipement.type_de_cuisine %></div><% end %>
+          <% if @flat.equipement.orientation_sud == "OUI" %><div class="col-6"><%= 'orientation_sud' %></div><% end %>
+          <% if @flat.equipement.orientation_est == "OUI" %><div class="col-6"><%= 'orientation_est' %></div><% end %>
+          <% if @flat.equipement.orientation_ouest == "OUI" %><div class="col-6"><%= 'orientation_ouest' %></div><% end %>
+          <% if @flat.equipement.orientation_nord == "OUI" %><div class="col-6"><%= 'orientation_nord' %></div><% end %>
+          <% if @flat.equipement.nb_balcons != 0 %><div class="col-6"><%= 'nb_balcons : ' + @flat.equipement.nb_balcons.to_s %></div><% end %>
+          <% if @flat.equipement.sf_balcon != 0 %><div class="col-6"><%= 'sf_balcon : ' + @flat.equipement.sf_balcon.to_s %></div><% end %>
+          <% if @flat.equipement.ascenseur == "OUI" %><div class="col-6"><%= 'ascenseur' %></div><% end %>
+          <% if @flat.equipement.cave == "OUI" %><div class="col-6"><%= 'cave' %></div><% end %>
+          <% if @flat.equipement.nb_de_parkings != 0 %><div class="col-6"><%= 'nb_de_parkings : ' + @flat.equipement.nb_de_parkings.to_s %></div><% end %>
+          <% if @flat.equipement.nb_de_boxes != 0 %><div class="col-6"><%= 'nb_de_boxes : ' + @flat.equipement.nb_de_boxes.to_s %></div><% end %>
+          <% if @flat.equipement.gardien != "" %><div class="col-6"><%= 'gardien' %></div><% end %>
+          <% if @flat.equipement.terrasse != "" %><div class="col-6"><%= 'terrasse' %></div><% end %>
+          <% if @flat.equipement.nb_de_personnes != 0 %><div class="col-6"><%= 'nb_de_personnes : ' + @flat.equipement.nb_de_personnes.to_s %></div><% end %>
+          <% if @flat.equipement.type_de_rsidence != "" %><div class="col-6"><%= 'type_de_rsidence : ' + @flat.equipement.type_de_rsidence %></div><% end %>
+          <% if @flat.equipement.situation != "" %><div class="col-6"><%= 'situation : ' + @flat.equipement.situation %></div><% end %>
+          <% if @flat.equipement.nb_de_lits_doubles != 0 %><div class="col-6"><%= 'nb_de_lits_doubles : ' + @flat.equipement.nb_de_lits_doubles.to_s %></div><% end %>
+          <% if @flat.equipement.nb_de_lits_simples != 0 %><div class="col-6"><%= 'nb_de_lits_simples : ' + @flat.equipement.nb_de_lits_simples.to_s %></div><% end %>
+          <% if @flat.equipement.alarme == "OUI" %><div class="col-6"><%= 'alarme' %></div><% end %>
+          <% if @flat.equipement.cble_tv == "OUI" %><div class="col-6"><%= 'cble_tv' %></div><% end %>
+          <% if @flat.equipement.calme == "OUI" %><div class="col-6"><%= 'calme' %></div><% end %>
+          <% if @flat.equipement.climatisation == "OUI" %><div class="col-6"><%= 'climatisation' %></div><% end %>
+          <% if @flat.equipement.piscine == "OUI" %><div class="col-6"><%= 'piscine' %></div><% end %>
+          <% if @flat.equipement.amnagement_pour_handicaps == "OUI" %><div class="col-6"><%= 'amnagement_pour_handicaps' %></div><% end %>
+          <% if @flat.equipement.animaux_accepts == "OUI" %><div class="col-6"><%= 'animaux_accepts' %></div><% end %>
+          <% if @flat.equipement.chemine == "OUI" %><div class="col-6"><%= 'chemine' %></div><% end %>
+          <% if @flat.equipement.conglateur == "OUI" %><div class="col-6"><%= 'conglateur' %></div><% end %>
+          <% if @flat.equipement.four == "OUI" %><div class="col-6"><%= 'four' %></div><% end %>
+          <% if @flat.equipement.lavevaisselle == "OUI" %><div class="col-6"><%= 'lavevaisselle' %></div><% end %>
+          <% if @flat.equipement.microondes == "OUI" %><div class="col-6"><%= 'microondes' %></div><% end %>
+          <% if @flat.equipement.placards == "OUI" %><div class="col-6"><%= 'placards' %></div><% end %>
+          <% if @flat.equipement.tlphone == "OUI" %><div class="col-6"><%= 'tlphone' %></div><% end %>
+          <% if @flat.equipement.proche_lac == "OUI" %><div class="col-6"><%= 'proche_lac' %></div><% end %>
+          <% if @flat.equipement.proche_tennis == "OUI" %><div class="col-6"><%= 'proche_tennis' %></div><% end %>
+          <% if @flat.equipement.proche_pistes_de_ski == "OUI" %><div class="col-6"><%= 'proche_pistes_de_ski' %></div><% end %>
+          <% if @flat.equipement.vue_dgage == "OUI" %><div class="col-6"><%= 'vue_dgage' %></div><% end %>
+          <% if @flat.equipement.duplex == "OUI" %><div class="col-6"><%= 'duplex' %></div><% end %>
+          <% if @flat.equipement.mandat_en_exclusivit == "OUI" %><div class="col-6"><%= 'mandat_en_exclusivit' %></div><% end %>
+        </div>
       </div>      
       <div class="border-bottom mb-4">
         <h3 class="text-color-warm-black py-3 mb-0">Diagnostics énergétiques</h3>
@@ -59,12 +99,15 @@
     <div class="position-relative col-12 col-md-6 col-lg-4">
       <div class="text-center background-color-cases m-4 p-4 box-shadow-two-black position-sticky" style="top: 150px;">
         <div class="d-flex justify-content-between align-items-center">
-          <p>1000€ / mois</p>
-          <p>3 pièces</p>
+          <% if @flat.type_dannonce == "vente" %>
+            <p><%= @flat.prix__loyer %>€</p>
+          <% else %>
+            <p><%= @flat.prix_semaine__basse_saison %>€</p>
+          <% end %>
+          <% if @flat.nb_de_pieces != 0 %><p><%= @flat.nb_de_pieces %> pièces</p><% end %>
         </div>
         <div class="d-flex justify-content-between align-items-center">
-          <p>patati</p>
-          <p>patata</p>
+          <p><%= @flat.cp %> - <%= @flat.ville %></p>
         </div>
         <a href="#contact_loc" class='button-crimson2 box-shadow-two-black font-weight-500' style='min-width: 150px; font-size: 18px;'>Nous contacter</a>
       </div>

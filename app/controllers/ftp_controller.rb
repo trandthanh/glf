@@ -4,6 +4,9 @@ require 'zip'
 require 'csv'
 
 class FtpController < ApplicationController
+  include UpdateFlatConcern
+  include UpdateEquipementConcern
+
   skip_before_action :authenticate_user!
 
   def upload
@@ -18,11 +21,17 @@ class FtpController < ApplicationController
     csv_path = File.expand_path(File.dirname(__FILE__) + "../../../storage/csv/annonce_unzip")
     extract_zip(filepath, csv_path)
     
-    csv_options = { col_sep: '!#', quote_char: '"', headers: :first_row, header_converters: :symbol, encoding: "Windows-1252" }
-     CSV.foreach(File.expand_path(File.dirname(__FILE__) + "../../../storage/csv/annonce_unzip/Annonces.csv"), csv_options) do |row|
-      puts "#{row[0]}, #{row[1]}"
-      raise
-     end 
+    references_agence = []
+    csv_options = { col_sep: '!#', quote_char: '"', encoding: "Windows-1252", headers: :first_row, header_converters: :symbol }
+    CSV.foreach(File.expand_path(File.dirname(__FILE__) + "../../../storage/csv/annonce_unzip/Annonces.csv"), csv_options) do |row|
+      flat = Flat.find_or_create_by(reference_agence_du_bien: row[:rfrence_agence_du_bien])
+      update_flat_attributes(flat, row)
+      equipement = Equipement.find_or_create_by(flat: flat)
+      update_equipement_attributes(equipement, row)
+      references_agence << row[:rfrence_agence_du_bien]
+    end
+
+    Flat.all.each { |f| f.destroy if !references_agence.include?(f.reference_agence_du_bien) }
   end
 
   def extract_zip(filepath, destination)
