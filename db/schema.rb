@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_22_113154) do
+ActiveRecord::Schema.define(version: 2021_06_22_153816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 2021_06_22_113154) do
     t.integer "prix_semaine__haute_saison"
     t.integer "prix_quinzaine__haute_saison"
     t.integer "prix_mois__haute_saison"
+    t.string "photos", default: [], array: true
   end
 
   create_table "users", force: :cascade do |t|

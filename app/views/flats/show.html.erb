@@ -3,18 +3,19 @@
 <div class="container">
   <!-- div verte avec titre et tagline principale -->
 
+  <% if @flat.photos.empty? %>
+  <div class="mt-5 bg-dark text-center padding-5-t-b">
+    <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="First slide">
+  </div>
+  <% else %>
   <div class="mt-5 bg-dark text-center padding-5-t-b">
     <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="First slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="Second slide">
-        </div>
-        <div class="carousel-item">
-          <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="Third slide">
-        </div>
+        <% @flat.photos.each do |photo| %>
+          <div class="carousel-item <%= 'active' if photo == @flat.photos.first %>">
+            <img class="d-block w-100" src="<%= photo %>" style="height: 50vh; object-fit: contain;" alt="First slide">
+          </div>
+        <% end %>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -26,6 +27,7 @@
       </a>
     </div>
   </div>
+  <% end %>
 
   <div class="my-5 mx-0 row flex-column-reverse flex-md-row justify-content-between">
 

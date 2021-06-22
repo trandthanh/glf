@@ -7,15 +7,20 @@
       <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
         <%= link_to flat_path(flat), class: 'd-flex h-100', style: 'max-height: 390px;' do %>
           <div class="card w-full">
-            <img class="card-img-top" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="object-fit: cover; object-position: center;" alt="Card image cap">
+            <img class="card-img-top" src="<%= flat.photos.empty? ? 'https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' : flat.photos.first %>" style="object-fit: cover; object-position: center;" alt="Card image cap">
             <div class="p-4">
               <div class="d-flex justify-content-between align-items-center pb-3">
                 <div class="text-left"><%= flat.address %></div>
-                <div class="text-left">1000€/mois</div>
+                <div class="text-left">
+                <% if flat.type_dannonce == "vente" %>
+                  <%= flat.prix__loyer %>€
+                <% else %>
+                  <%= flat.prix_mois__basse_saison %>€/mois
+                <% end %></div>
               </div>
               <div class="d-flex justify-content-between align-items-center">
-                <div>3p</div>
-                <div>172m2</div>
+                <div><%= flat.nb_de_pieces %> pièces</div>
+                <div><%= flat.surface %>m2</div>
               </div>
             </div>
           </div>
