@@ -27,6 +27,11 @@ module UpdateFlatConcern
       prix_quinzaine__basse_saison: row[:prix_quinzaine__basse_saison].to_i,
       prix_mois__basse_saison: row[:prix_mois__basse_saison].to_i
     )
+    i = 1
+    15.times do 
+      flat.photos << row["photo_#{i}".to_sym] if row["photo_#{i}".to_sym] != ""
+      i += 1
+    end
     flat.save!
   end
 end
