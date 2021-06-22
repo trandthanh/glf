@@ -35,8 +35,11 @@ Rails.application.routes.draw do
   get 'services/acheter', to: 'services#acheter', mail: 'transactions@glf.eu', titre: "Vous cherchez à investir"
   # 6
 
-  # get 'ftp/new', to: 'ftp#new'
-  # post 'ftp/upload', to: 'ftp#upload'
+  get 'ftp/new', to: 'ftp#new'
+  post 'ftp/upload', to: 'ftp#upload'
+
+  # Flats
+  get 'flats/:id', to: 'flats#show', mail: 'locations@glf.eu', titre: "Vous cherchez un bien à la location", as: :flat
 
 end
 

@@ -1,0 +1,5 @@
+Version=4.08
+Release=4.08
+Mode=AR
+Application=Netty/1.00
+Devise=Euro
