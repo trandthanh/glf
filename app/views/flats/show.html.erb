@@ -5,7 +5,7 @@
     <div class="bg-dark text-center padding-5-t-b">
       <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="First slide">
     </div>
-    <% else %>
+  <% else %>
     <div class="bg-dark text-center padding-5-t-b">
       <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
         <div class="carousel-inner">
@@ -32,7 +32,7 @@
     <div class="col-12 col-md-6 col-lg-8">
       <div class="border-bottom mb-4">
         <h1 class="text-color-warm-black mt-3 pb-3 mb-0"><%= @flat.libelle %></h1>
-        <span><%= @flat.surface %> m2</span><% if @flat.nb_de_pieces != 0 %><span><%= @flat.nb_de_pieces %> pièces</span><% end %>
+        <span><%= @flat.surface %> m²</span><% if @flat.nb_de_pieces != 0 %><span> - <%= @flat.nb_de_pieces %> pièces</span><% end %>
         <p><%= @flat.cp %> - <%= @flat.ville %></p>
       </div>
       <div class="border-bottom mb-4 pb-4">
