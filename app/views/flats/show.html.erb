@@ -1,95 +1,93 @@
 <div class="height-desktop-index"></div>
 
 <div class="container">
-  <!-- div verte avec titre et tagline principale -->
-
   <% if @flat.photos.empty? %>
-  <div class="mt-5 bg-dark text-center padding-5-t-b">
-    <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="First slide">
-  </div>
-  <% else %>
-  <div class="mt-5 bg-dark text-center padding-5-t-b">
-    <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
-      <div class="carousel-inner">
-        <% @flat.photos.each do |photo| %>
-          <div class="carousel-item <%= 'active' if photo == @flat.photos.first %>">
-            <img class="d-block w-100" src="<%= photo %>" style="height: 50vh; object-fit: contain;" alt="First slide">
-          </div>
-        <% end %>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <div class="bg-dark text-center padding-5-t-b">
+      <img class="d-block w-100" src="https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" style="height: 50vh; object-fit: contain;" alt="First slide">
     </div>
-  </div>
+  <% else %>
+    <div class="bg-dark text-center padding-5-t-b">
+      <div id="carouselExampleControls" class="carousel slide mx-auto" data-ride="carousel">
+        <div class="carousel-inner">
+          <% @flat.photos.each do |photo| %>
+            <div class="carousel-item <%= 'active' if photo == @flat.photos.first %>">
+              <img class="d-block w-100" src="<%= photo %>" style="height: 70vh; object-fit: contain;" alt="First slide">
+            </div>
+          <% end %>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
   <% end %>
 
-  <div class="my-5 mx-0 row flex-column-reverse flex-md-row justify-content-between">
+  <div class="mt-2 mb-5 mx-0 row flex-column-reverse flex-md-row justify-content-between">
 
     <div class="col-12 col-md-6 col-lg-8">
       <div class="border-bottom mb-4">
-        <h1 class="text-color-warm-black py-3 mb-0"><%= @flat.libelle %></h1>
-        <span><%= @flat.surface %> m2</span><span class="px-2 font-size-32px"></span><% if @flat.nb_de_pieces != 0 %><span><%= @flat.nb_de_pieces %> pièces</span><% end %>
+        <h1 class="text-color-warm-black mt-3 pb-3 mb-0"><%= @flat.libelle %></h1>
+        <span><%= @flat.surface %> m²</span><% if @flat.nb_de_pieces != 0 %><span> - <%= @flat.nb_de_pieces %> pièces</span><% end %>
         <p><%= @flat.cp %> - <%= @flat.ville %></p>
       </div>
-      <div class="border-bottom mb-4">
-        <h3 class="text-color-warm-black py-3 mb-0">Description</h3>
+      <div class="border-bottom mb-4 pb-4">
+        <h3 class="text-color-warm-black pb-3 mb-0">Description</h3>
         <p><%= @flat.descriptif.html_safe %></p>
       </div>
-      <div class="border-bottom mb-4">
-        <h3 class="text-color-warm-black py-3 mb-0">Equipements</h3>
+      <div class="border-bottom mb-4 pb-4">
+        <h3 class="text-color-warm-black pb-3 mb-0">Equipements</h3>
         <div class="row mx-0">
-          <% if @flat.equipement.type_de_chauffage != "" %><div class="col-6"><%= 'type_de_chauffage : ' + @flat.equipement.type_de_chauffage %></div><% end %>
-          <% if @flat.equipement.type_de_cuisine != "" %><div class="col-6"><%= 'type_de_cuisine : ' + @flat.equipement.type_de_cuisine %></div><% end %>
-          <% if @flat.equipement.orientation_sud == "OUI" %><div class="col-6"><%= 'orientation_sud' %></div><% end %>
-          <% if @flat.equipement.orientation_est == "OUI" %><div class="col-6"><%= 'orientation_est' %></div><% end %>
-          <% if @flat.equipement.orientation_ouest == "OUI" %><div class="col-6"><%= 'orientation_ouest' %></div><% end %>
-          <% if @flat.equipement.orientation_nord == "OUI" %><div class="col-6"><%= 'orientation_nord' %></div><% end %>
-          <% if @flat.equipement.nb_balcons != 0 %><div class="col-6"><%= 'nb_balcons : ' + @flat.equipement.nb_balcons.to_s %></div><% end %>
-          <% if @flat.equipement.sf_balcon != 0 %><div class="col-6"><%= 'sf_balcon : ' + @flat.equipement.sf_balcon.to_s %></div><% end %>
-          <% if @flat.equipement.ascenseur == "OUI" %><div class="col-6"><%= 'ascenseur' %></div><% end %>
-          <% if @flat.equipement.cave == "OUI" %><div class="col-6"><%= 'cave' %></div><% end %>
-          <% if @flat.equipement.nb_de_parkings != 0 %><div class="col-6"><%= 'nb_de_parkings : ' + @flat.equipement.nb_de_parkings.to_s %></div><% end %>
-          <% if @flat.equipement.nb_de_boxes != 0 %><div class="col-6"><%= 'nb_de_boxes : ' + @flat.equipement.nb_de_boxes.to_s %></div><% end %>
-          <% if @flat.equipement.gardien != "" %><div class="col-6"><%= 'gardien' %></div><% end %>
-          <% if @flat.equipement.terrasse != "" %><div class="col-6"><%= 'terrasse' %></div><% end %>
-          <% if @flat.equipement.nb_de_personnes != 0 %><div class="col-6"><%= 'nb_de_personnes : ' + @flat.equipement.nb_de_personnes.to_s %></div><% end %>
-          <% if @flat.equipement.type_de_rsidence != "" %><div class="col-6"><%= 'type_de_rsidence : ' + @flat.equipement.type_de_rsidence %></div><% end %>
-          <% if @flat.equipement.situation != "" %><div class="col-6"><%= 'situation : ' + @flat.equipement.situation %></div><% end %>
-          <% if @flat.equipement.nb_de_lits_doubles != 0 %><div class="col-6"><%= 'nb_de_lits_doubles : ' + @flat.equipement.nb_de_lits_doubles.to_s %></div><% end %>
-          <% if @flat.equipement.nb_de_lits_simples != 0 %><div class="col-6"><%= 'nb_de_lits_simples : ' + @flat.equipement.nb_de_lits_simples.to_s %></div><% end %>
-          <% if @flat.equipement.alarme == "OUI" %><div class="col-6"><%= 'alarme' %></div><% end %>
-          <% if @flat.equipement.cble_tv == "OUI" %><div class="col-6"><%= 'cble_tv' %></div><% end %>
-          <% if @flat.equipement.calme == "OUI" %><div class="col-6"><%= 'calme' %></div><% end %>
-          <% if @flat.equipement.climatisation == "OUI" %><div class="col-6"><%= 'climatisation' %></div><% end %>
-          <% if @flat.equipement.piscine == "OUI" %><div class="col-6"><%= 'piscine' %></div><% end %>
-          <% if @flat.equipement.amnagement_pour_handicaps == "OUI" %><div class="col-6"><%= 'amnagement_pour_handicaps' %></div><% end %>
-          <% if @flat.equipement.animaux_accepts == "OUI" %><div class="col-6"><%= 'animaux_accepts' %></div><% end %>
-          <% if @flat.equipement.chemine == "OUI" %><div class="col-6"><%= 'chemine' %></div><% end %>
-          <% if @flat.equipement.conglateur == "OUI" %><div class="col-6"><%= 'conglateur' %></div><% end %>
-          <% if @flat.equipement.four == "OUI" %><div class="col-6"><%= 'four' %></div><% end %>
-          <% if @flat.equipement.lavevaisselle == "OUI" %><div class="col-6"><%= 'lavevaisselle' %></div><% end %>
-          <% if @flat.equipement.microondes == "OUI" %><div class="col-6"><%= 'microondes' %></div><% end %>
-          <% if @flat.equipement.placards == "OUI" %><div class="col-6"><%= 'placards' %></div><% end %>
-          <% if @flat.equipement.tlphone == "OUI" %><div class="col-6"><%= 'tlphone' %></div><% end %>
-          <% if @flat.equipement.proche_lac == "OUI" %><div class="col-6"><%= 'proche_lac' %></div><% end %>
-          <% if @flat.equipement.proche_tennis == "OUI" %><div class="col-6"><%= 'proche_tennis' %></div><% end %>
-          <% if @flat.equipement.proche_pistes_de_ski == "OUI" %><div class="col-6"><%= 'proche_pistes_de_ski' %></div><% end %>
-          <% if @flat.equipement.vue_dgage == "OUI" %><div class="col-6"><%= 'vue_dgage' %></div><% end %>
-          <% if @flat.equipement.duplex == "OUI" %><div class="col-6"><%= 'duplex' %></div><% end %>
-          <% if @flat.equipement.mandat_en_exclusivit == "OUI" %><div class="col-6"><%= 'mandat_en_exclusivit' %></div><% end %>
+          <% if @flat.equipement.type_de_chauffage != "" %><div class="col-6 px-0 py-2"><%= 'Type de chauffage : ' + @flat.equipement.type_de_chauffage %></div><% end %>
+          <% if @flat.equipement.type_de_cuisine != "" %><div class="col-6 px-0 py-2"><%= 'Type de cuisine : ' + @flat.equipement.type_de_cuisine %></div><% end %>
+          <% if @flat.equipement.orientation_sud == "OUI" %><div class="col-6 px-0 py-2"><%= 'Orientation Sud' %></div><% end %>
+          <% if @flat.equipement.orientation_est == "OUI" %><div class="col-6 px-0 py-2"><%= 'Orientation Est' %></div><% end %>
+          <% if @flat.equipement.orientation_ouest == "OUI" %><div class="col-6 px-0 py-2"><%= 'Orientation Ouest' %></div><% end %>
+          <% if @flat.equipement.orientation_nord == "OUI" %><div class="col-6 px-0 py-2"><%= 'Orientation Nord' %></div><% end %>
+          <% if @flat.equipement.nb_balcons != 0 %><div class="col-6 px-0 py-2"><%= 'Balcon(s) : ' + @flat.equipement.nb_balcons.to_s %></div><% end %>
+          <% if @flat.equipement.sf_balcon != 0 %><div class="col-6 px-0 py-2"><%= 'Surface du/des balcon(s) : ' + @flat.equipement.sf_balcon.to_s %></div><% end %>
+          <% if @flat.equipement.ascenseur == "OUI" %><div class="col-6 px-0 py-2"><%= 'Ascenseur' %></div><% end %>
+          <% if @flat.equipement.cave == "OUI" %><div class="col-6 px-0 py-2"><%= 'Cave' %></div><% end %>
+          <% if @flat.equipement.nb_de_parkings != 0 %><div class="col-6 px-0 py-2"><%= 'Parking(s) : ' + @flat.equipement.nb_de_parkings.to_s %></div><% end %>
+          <% if @flat.equipement.nb_de_boxes != 0 %><div class="col-6 px-0 py-2"><%= 'Nombre de boxes : ' + @flat.equipement.nb_de_boxes.to_s %></div><% end %>
+          <% if @flat.equipement.gardien != "" %><div class="col-6 px-0 py-2"><%= 'Gardien' %></div><% end %>
+          <% if @flat.equipement.terrasse != "" %><div class="col-6 px-0 py-2"><%= 'Terrasse' %></div><% end %>
+          <% if @flat.equipement.nb_de_personnes != 0 %><div class="col-6 px-0 py-2"><%= 'Nombre de personne(s) : ' + @flat.equipement.nb_de_personnes.to_s %></div><% end %>
+          <% if @flat.equipement.type_de_rsidence != "" %><div class="col-6 px-0 py-2"><%= 'Type de résidence : ' + @flat.equipement.type_de_rsidence %></div><% end %>
+          <% if @flat.equipement.situation != "" %><div class="col-6 px-0 py-2"><%= 'Situation : ' + @flat.equipement.situation %></div><% end %>
+          <% if @flat.equipement.nb_de_lits_doubles != 0 %><div class="col-6 px-0 py-2"><%= 'Lit(s) double(s) : ' + @flat.equipement.nb_de_lits_doubles.to_s %></div><% end %>
+          <% if @flat.equipement.nb_de_lits_simples != 0 %><div class="col-6 px-0 py-2"><%= 'Lit(s) simple(s): ' + @flat.equipement.nb_de_lits_simples.to_s %></div><% end %>
+          <% if @flat.equipement.alarme == "OUI" %><div class="col-6 px-0 py-2"><%= 'Alarme' %></div><% end %>
+          <% if @flat.equipement.cble_tv == "OUI" %><div class="col-6 px-0 py-2"><%= 'Câble TV' %></div><% end %>
+          <% if @flat.equipement.calme == "OUI" %><div class="col-6 px-0 py-2"><%= 'Calme' %></div><% end %>
+          <% if @flat.equipement.climatisation == "OUI" %><div class="col-6 px-0 py-2"><%= 'Climatisation' %></div><% end %>
+          <% if @flat.equipement.piscine == "OUI" %><div class="col-6 px-0 py-2"><%= 'piscine' %></div><% end %>
+          <% if @flat.equipement.amnagement_pour_handicaps == "OUI" %><div class="col-6 px-0 py-2"><%= 'Aménagement pour PMR' %></div><% end %>
+          <% if @flat.equipement.animaux_accepts == "OUI" %><div class="col-6 px-0 py-2"><%= 'Animaux acceptés' %></div><% end %>
+          <% if @flat.equipement.chemine == "OUI" %><div class="col-6 px-0 py-2"><%= 'Cheminée' %></div><% end %>
+          <% if @flat.equipement.conglateur == "OUI" %><div class="col-6 px-0 py-2"><%= 'Congélateur' %></div><% end %>
+          <% if @flat.equipement.four == "OUI" %><div class="col-6 px-0 py-2"><%= 'four' %></div><% end %>
+          <% if @flat.equipement.lavevaisselle == "OUI" %><div class="col-6 px-0 py-2"><%= 'Lave vaisselle' %></div><% end %>
+          <% if @flat.equipement.microondes == "OUI" %><div class="col-6 px-0 py-2"><%= 'Microondes' %></div><% end %>
+          <% if @flat.equipement.placards == "OUI" %><div class="col-6 px-0 py-2"><%= 'Placards' %></div><% end %>
+          <% if @flat.equipement.tlphone == "OUI" %><div class="col-6 px-0 py-2"><%= 'Téléphone' %></div><% end %>
+          <% if @flat.equipement.proche_lac == "OUI" %><div class="col-6 px-0 py-2"><%= 'Proche lac' %></div><% end %>
+          <% if @flat.equipement.proche_tennis == "OUI" %><div class="col-6 px-0 py-2"><%= 'Proche tennis' %></div><% end %>
+          <% if @flat.equipement.proche_pistes_de_ski == "OUI" %><div class="col-6 px-0 py-2"><%= 'Proche pistes de ski' %></div><% end %>
+          <% if @flat.equipement.vue_dgage == "OUI" %><div class="col-6 px-0 py-2"><%= 'Vue dégagée' %></div><% end %>
+          <% if @flat.equipement.duplex == "OUI" %><div class="col-6 px-0 py-2"><%= 'Duplex' %></div><% end %>
+          <% if @flat.equipement.mandat_en_exclusivit == "OUI" %><div class="col-6 px-0 py-2"><%= 'Mandat en exclusivité' %></div><% end %>
         </div>
       </div>      
-      <div class="border-bottom mb-4">
+      <div class="border-bottom mb-4 pb-4">
         <h3 class="text-color-warm-black py-3 mb-0">Diagnostics énergétiques</h3>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi necessitatibus vel sint quia, veritatis consequatur neque molestias illo quidem quae sed autem natus nulla maiores dignissimos eveniet dicta error veniam!</p>
       </div> 
-      <div class="border-bottom mb-4">
+      <div class="border-bottom mb-4 pb-4">
         <h3 class="text-color-warm-black py-3 mb-0">Localisation du bien</h3>
         <div id="map"
           style="width: 100%; height: 300px;"
@@ -102,9 +100,9 @@
       <div class="text-center background-color-cases m-4 p-4 box-shadow-two-black position-sticky" style="top: 150px;">
         <div class="d-flex justify-content-between align-items-center">
           <% if @flat.type_dannonce == "vente" %>
-            <p><%= @flat.prix__loyer %>€</p>
+            <%= number_with_delimiter(@flat.prix__loyer, delimiter: " ", separator: ",") %>€
           <% else %>
-            <p><%= @flat.prix_semaine__basse_saison %>€</p>
+            <%= number_with_delimiter(@flat.prix_mois__basse_saison, delimiter: " ", separator: ",") %>€/mois
           <% end %>
           <% if @flat.nb_de_pieces != 0 %><p><%= @flat.nb_de_pieces %> pièces</p><% end %>
         </div>

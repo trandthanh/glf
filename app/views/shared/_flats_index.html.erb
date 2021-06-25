@@ -1,43 +1,48 @@
-<div class="row flex-column-reverse flex-md-row mx-0 w-100 pb-5">
+<% if @flats.empty? %>
+  <h4 class="my-5 font-weight-400 mx-auto text-center">Nous n'avons pas de bien disponible à la <%= action_name == 'acheter' ? 'vente' : 'location' %> pour le moment</h4>
+<% else %>
+  <div class="row flex-column-reverse flex-md-row mx-0 w-100 pb-5">
 
-  <div class="col-12 col-md-8 col-lg-9 px-0 pt-4 pt-md-0">
-    <div class="w-100 row m-0 padding-5-l-r-m-5-l-r text-center">
+    <div class="col-12 col-md-8 col-lg-9 px-0 pt-4 pt-md-0">
+      <div class="w-100 row m-0 padding-5-l-r-m-5-l-r text-center">
 
-      <% @flats.each do |flat| %>
-      <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
-        <%= link_to flat_path(flat), class: 'd-flex h-100', style: 'max-height: 390px;' do %>
-          <div class="card w-full">
-            <img class="card-img-top" src="<%= flat.photos.empty? ? 'https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' : flat.photos.first %>" style="object-fit: cover; object-position: center;" alt="Card image cap">
-            <div class="p-4">
-              <div class="d-flex justify-content-between align-items-center pb-3">
-                <div class="text-left"><%= flat.address %></div>
-                <div class="text-left">
-                <% if flat.type_dannonce == "vente" %>
-                  <%= flat.prix__loyer %>€
-                <% else %>
-                  <%= flat.prix_mois__basse_saison %>€/mois
-                <% end %></div>
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <div><%= flat.nb_de_pieces %> pièces</div>
-                <div><%= flat.surface %>m2</div>
+        <% @flats.each do |flat| %>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-4">
+          <%= link_to flat_path(flat), class: 'd-flex h-100 w-100', style: 'max-height: 390px;' do %>
+            <div class="card w-100 border-0 box-shadow-two-black">
+              <img class="card-img-top-index" src="<%= flat.photos.empty? ? 'https://images.unsplash.com/photo-1530398231547-70832467b336?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' : flat.photos.first %>" style="object-fit: cover; object-position: center;" alt="Card image cap">
+              <div class="p-3">
+                <div class="d-flex justify-content-between align-items-center pb-2">
+                  <div class="text-left font-weight-500 text-color-warm-black"><%= flat.cp %> - <%= flat.ville %></div>
+                  <div class="text-left font-weight-100">
+                    <% if flat.type_dannonce == "vente" %>
+                      <%= number_with_delimiter(flat.prix__loyer, delimiter: " ", separator: ",") %>€
+                    <% else %>
+                      <%= number_with_delimiter(flat.prix_mois__basse_saison, delimiter: " ", separator: ",") %>€/mois
+                    <% end %>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div><%= flat.nb_de_pieces %> pièces</div>
+                  <div><%= flat.surface %>m²</div>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
+        </div>
         <% end %>
       </div>
-      <% end %>
+    </div>
+
+    <div class="position-relative w-100 col-12 col-md-4 col-lg-3 px-0">
+      <div class="position-sticky" style="top: 150px;">
+        <div id="map"
+          style="width: 100%;"
+          data-markers="<%= @markers.to_json %>"
+          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+      </div>
     </div>
   </div>
 
-  <div class="position-relative w-100 col-12 col-md-4 col-lg-3 px-0">
-    <div class="position-sticky" style="top: 150px;">
-      <div id="map"
-        style="width: 100%;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-    </div>
-  </div>
-</div>
-
-<div class="w-100 mx-auto"><%== pagy_bootstrap_nav(@pagy) %></div>
+  <div class="w-100 mx-auto"><%== pagy_bootstrap_nav(@pagy) %></div>
+<% end %>
