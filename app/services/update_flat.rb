@@ -29,9 +29,9 @@ class UpdateFlat < ApplicationService
       prix_semaine__basse_saison: @row[:prix_semaine__basse_saison].to_i,
       prix_quinzaine__basse_saison: @row[:prix_quinzaine__basse_saison].to_i,
       prix_mois__basse_saison: @row[:prix_mois__basse_saison].to_i,
-      prix_semaine__basse_saison: @row[:prix_semaine__basse_saison].to_i,
-      prix_quinzaine__basse_saison: @row[:prix_quinzaine__basse_saison].to_i,
-      prix_mois__basse_saison: @row[:prix_mois__basse_saison].to_i
+      prix_semaine__haute_saison: @row[:prix_semaine__haute_saison].to_i,
+      prix_quinzaine__haute_saison: @row[:prix_quinzaine__haute_saison].to_i,
+      prix_mois__haute_saison: @row[:prix_mois__haute_saison].to_i
     )
     i = 1
     @flat.photos = []
